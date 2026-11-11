@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://vmi3162910.contaboserver.net; base-uri 'none'; form-action 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://vmi3162910.contaboserver.net https://chat-proxy.trescuatenta.workers.dev; base-uri 'none'; form-action 'self'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="index, follow">
 <meta name="description" content="340 crea webs claras, automatiza tareas y analiza mejoras para que los negocios trabajen con más orden y tiempo. Diseño web y procesos digitales con criterio.">
-<link rel="canonical" href="https://au.mikabastett.workers.dev/">
+<link rel="canonical" href="https://tres40.dev/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:site_name" content="340">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://au.mikabastett.workers.dev/">
+<meta property="og:url" content="https://tres40.dev/">
 <meta property="og:title" content="340 — Diseño web y automatización con criterio">
 <meta property="og:description" content="Una web clara, procesos más simples y mejoras priorizadas según las necesidades de tu negocio.">
-<meta property="og:image" content="https://au.mikabastett.workers.dev/og-image.png">
+<meta property="og:image" content="https://tres40.dev/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="340: diseño web, automatización práctica y análisis de procesos para negocios.">
@@ -24,7 +24,7 @@
 <meta name="color-scheme" content="dark light">
 <meta name="twitter:title" content="340 — Diseño web y automatización con criterio">
 <meta name="twitter:description" content="Una web clara, procesos más simples y mejoras priorizadas según las necesidades de tu negocio.">
-<meta name="twitter:image" content="https://au.mikabastett.workers.dev/og-image.png">
+<meta name="twitter:image" content="https://tres40.dev/og-image.png">
 <meta name="twitter:image:alt" content="340: diseño web, automatización práctica y análisis de procesos para negocios.">
 <title>340 — Diseño web y automatización con criterio</title>
 <script type="application/ld+json">
@@ -32,9 +32,9 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "340",
-  "url": "https://au.mikabastett.workers.dev/",
+  "url": "https://tres40.dev/",
   "description": "Diseño web, automatización práctica y análisis de procesos para negocios.",
-  "image": "https://au.mikabastett.workers.dev/og-image.png",
+  "image": "https://tres40.dev/og-image.png",
   "serviceType": ["Diseño web", "Automatización de procesos", "Análisis y mejora digital"]
 }
 </script>
@@ -497,7 +497,7 @@ h1 span{display:block;color:#ce8060}
 (function(){
   var TO="";
   var WEBHOOK="https://vmi3162910.contaboserver.net/webhook/formulario-contacto";
-  var CHAT_WEBHOOK="https://vmi3162910.contaboserver.net/webhook/24a070d7-0a7e-4b69-b100-83de8d71bdbc";
+  var CHAT_WEBHOOK="https://chat-proxy.trescuatenta.workers.dev";
   document.getElementById("y").textContent=new Date().getFullYear();
   var themeToggle=document.getElementById("themeToggle");
   themeToggle.addEventListener("click",function(){
@@ -573,8 +573,7 @@ h1 span{display:block;color:#ce8060}
     var send=chatForm.querySelector("button");
     send.disabled=true;
     var pending=addMessage("Estoy revisándolo...");
-    var payload=new URLSearchParams({message:question,sessionId:chatSession});
-    fetch(CHAT_WEBHOOK,{method:"POST",body:payload})
+    fetch(CHAT_WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:question,sessionId:chatSession})})
       .then(function(response){
         if(!response.ok)throw new Error("HTTP "+response.status);
         var type=response.headers.get("content-type")||"";
