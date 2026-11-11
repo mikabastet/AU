@@ -297,6 +297,8 @@ h1 span{display:block;color:#ce8060}
 @media(max-width:760px){.services-section{padding:45px 0 24px}.service-grid,.method-grid{grid-template-columns:1fr;gap:12px}.service-card{min-height:0;padding:22px}.service-card h3{margin:17px 0 8px}.method-section{padding:24px 0}.method-panel{padding:23px}.method-grid{gap:20px}.faq-section{padding:24px 0 48px}}
 @media(max-width:520px){.content-heading h2{font-size:clamp(1.8rem,8vw,2.25rem)}.faq-list summary{font-size:.9rem}.brand-caption{padding-left:6px;font-size:.48rem;letter-spacing:.08em}.top-nav{gap:10px}.top-nav a:nth-child(2){display:none}}
 @media(max-width:360px){.brand-caption{display:none}}
+@media(max-width:760px){.chat-form input{font-size:16px}}
+@media(max-width:520px){.chat-panel{right:16px;bottom:calc(72px + env(safe-area-inset-bottom,0px));width:min(320px,calc(100vw - 48px));height:min(320px,48vh);height:min(320px,48dvh);max-height:calc(100dvh - 120px);border-radius:16px}}
 </style>
 </head>
 <body>
@@ -485,7 +487,7 @@ h1 span{display:block;color:#ce8060}
 </div>
 </footer>
 
-<button id="chatToggle" class="chat-toggle" type="button" aria-expanded="false" aria-controls="chatPanel"><span class="chat-dot" aria-hidden="true"></span> Pregunta al asistente</button>
+<button id="chatToggle" class="chat-toggle" type="button" aria-label="Probar el asistente de 340" aria-expanded="false" aria-controls="chatPanel"><span class="chat-dot" aria-hidden="true"></span> Pruébame</button>
 <section id="chatPanel" class="chat-panel" role="dialog" aria-label="Asistente de automatización" aria-hidden="true">
 <div class="chat-head"><div><strong>Asistente de automatización</strong><small>Una duda sobre tu negocio</small></div><button id="chatClose" class="chat-close" type="button" aria-label="Cerrar chat">×</button></div>
 <div id="chatMessages" class="chat-messages" role="log" aria-live="polite"><div class="chat-message">Hola. ¿Qué tarea repetitiva le quita tiempo a tu equipo?</div></div>
@@ -548,7 +550,10 @@ h1 span{display:block;color:#ce8060}
     panel.classList.toggle("open",open);
     panel.setAttribute("aria-hidden",String(!open));
     toggle.setAttribute("aria-expanded",String(open));
-    if(open)chatInput.focus();
+    if(open){
+      if(window.matchMedia("(max-width:760px)").matches)close.focus();
+      else chatInput.focus();
+    }else toggle.focus();
   }
   function addMessage(text,kind){
     var item=document.createElement("div");
