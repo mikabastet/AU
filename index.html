@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://vmi3162910.contaboserver.net https://chat-proxy.trescuatenta.workers.dev; base-uri 'none'; form-action 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline' https://challenges.cloudflare.com; img-src 'self' data:; connect-src 'self' https://vmi3162910.contaboserver.net https://chat-proxy.trescuatenta.workers.dev https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; base-uri 'none'; form-action 'self'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="index, follow">
 <meta name="description" content="340 crea webs claras, automatiza tareas y analiza mejoras para que los negocios trabajen con más orden y tiempo. Diseño web y procesos digitales con criterio.">
@@ -440,17 +440,16 @@ h1 span{display:block;color:#ce8060}
 <p>No hace falta tener la solución pensada. Cuéntame qué te preocupa y vemos qué tendría sentido para tu negocio.</p>
 <ul class="offer-list"><li>Una web más clara</li><li>Menos tareas manuales</li><li>Prioridades y presupuesto realistas</li></ul>
 </div>
-<form id="f" class="contact-form" novalidate autocomplete="on">
+<form id="f" class="contact-form" autocomplete="on">
 <div class="form-grid">
-<div class="field"><label for="n">Tu nombre</label><input id="n" type="text" maxlength="80" autocomplete="name" placeholder="Nombre" required></div>
-<div class="field"><label for="b">Empresa</label><input id="b" type="text" maxlength="100" autocomplete="organization" placeholder="Nombre de la empresa"></div>
-<div class="field wide"><label for="e">Email de trabajo</label><input id="e" type="email" maxlength="120" autocomplete="email" placeholder="nombre@empresa.com" required></div>
-<div class="field wide"><label for="servicio">¿En qué te gustaría avanzar?</label><select id="servicio" required><option value="" selected disabled>Elige una opción</option><option>Diseño o mejora de una web</option><option>Automatización de procesos</option><option>Auditoría o análisis de mejoras</option><option>Web y automatización, en conjunto</option><option>Todavía no lo tengo claro</option></select></div>
-<div class="field wide"><label for="m">Cuéntame un poco más</label><textarea id="m" maxlength="2000" required placeholder="¿Qué te gustaría mejorar en tu negocio?"></textarea></div>
+<div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" maxlength="80" autocomplete="name" placeholder="Nombre" required></div>
+<div class="field"><label for="email">Email de trabajo</label><input id="email" name="email" type="email" maxlength="120" autocomplete="email" placeholder="nombre@empresa.com" required></div>
+<div class="field wide"><label for="mensaje">Cuéntame un poco más</label><textarea id="mensaje" name="mensaje" minlength="20" maxlength="2000" required placeholder="¿Qué te gustaría mejorar en tu negocio?"></textarea></div>
 </div>
-<div class="hp" aria-hidden="true"><label for="w">No rellenar</label><input id="w" type="text" tabindex="-1" autocomplete="off"></div>
-<p class="consent"><input id="c" type="checkbox" required> <label for="c">Acepto la <a href="#privacidad">política de privacidad</a> para que me respondan.</label></p>
-<button class="button submit" type="submit">Hablemos de tu proyecto <span class="button-arrow" aria-hidden="true">↗</span></button>
+<input class="hp" id="website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input id="ts" name="ts" type="hidden">
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAF-cswaA7F01E_fP"></div>
+<button class="button submit" type="submit"><span id="submitLabel">Hablemos de tu proyecto</span> <span class="button-arrow" aria-hidden="true">↗</span></button>
 <p id="s" role="status" aria-live="polite"></p>
 </form>
 </div>
@@ -495,10 +494,10 @@ h1 span{display:block;color:#ce8060}
 <p class="chat-note">Asistente informativo · No compartas datos confidenciales</p>
 </section>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
 (function(){
-  var TO="";
-  var WEBHOOK="https://vmi3162910.contaboserver.net/webhook/formulario-contacto";
+  var WEBHOOK="https://vmi3162910.contaboserver.net/webhook/contacto";
   var CHAT_WEBHOOK="https://chat-proxy.trescuatenta.workers.dev";
   document.getElementById("y").textContent=new Date().getFullYear();
   var themeToggle=document.getElementById("themeToggle");
@@ -516,32 +515,41 @@ h1 span{display:block;color:#ce8060}
       if(d&&d.tagName==="DETAILS")d.open=true;
     });
   });
-  var f=document.getElementById("f"),s=document.getElementById("s"),last=0;
-  function g(id){return document.getElementById(id).value}
+  var f=document.getElementById("f"),s=document.getElementById("s"),ts=document.getElementById("ts");
+  var submitButton=f.querySelector('button[type="submit"]'),submitLabel=document.getElementById("submitLabel");
+  var defaultSubmitLabel=submitLabel.textContent;
+  ts.value=Date.now();
   function say(t,e){s.textContent=t;s.className=e?"err":""}
-  function cl(v){return String(v).replace(/[\u0000-\u001f\u007f<>]/g," ").trim()}
+  function resetTurnstile(){if(window.turnstile)window.turnstile.reset()}
   f.addEventListener("submit",function(ev){
     ev.preventDefault();
-    if(g("w"))return;
-    if(Date.now()-last<5000)return say("Espera unos segundos.",1);
-    var n=cl(g("n")),b=cl(g("b")),e=cl(g("e")),service=g("servicio"),m=cl(g("m"));
-    if(!n||!m)return say("Falta nombre o mensaje.",1);
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e))return say("Revisa el email.",1);
-    if(!service)return say("Elige si necesitas una web, una automatización o ambas.",1);
-    if(!document.getElementById("c").checked)return say("Tienes que aceptar la política de privacidad.",1);
-    last=Date.now();
-    var details=["Servicio solicitado: "+service,b?"Empresa: "+b:"",m].filter(Boolean).join("\n");
-    if(WEBHOOK){
-      say("Enviando...");
-      fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({nombre:n,negocio:b,email:e,servicio:service,mensaje:details,website:"",consentimiento:true,fecha:new Date().toISOString()})})
-        .then(function(r){if(!r.ok)throw 0;f.reset();say("Mensaje enviado. Te respondo pronto.")})
-        .catch(function(){say("No se pudo enviar. Inténtalo más tarde o contáctame por otro medio.",1)});
-      return;
-    }
-    if(!TO)return say("El formulario aún no está conectado. Configura el correo de contacto para recibir solicitudes.",1);
-    var body="Nombre: "+n+"\nEmpresa: "+(b||"-")+"\nEmail: "+e+"\n\n"+details;
-    location.href="mailto:"+TO+"?subject="+encodeURIComponent("Diagnóstico de automatización: "+(b||n))+"&body="+encodeURIComponent(body);
-    say("Se abrirá tu correo para enviar el mensaje.");
+    submitButton.disabled=true;
+    submitLabel.textContent="Enviando...";
+    say("",false);
+    fetch(WEBHOOK,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(Object.fromEntries(new FormData(f)))
+    })
+      .then(function(response){
+        if(response.status!==200)throw new Error("Unexpected response status");
+        return response.json();
+      })
+      .then(function(data){
+        if(!data||data.ok!==true)throw new Error("Unexpected response body");
+        f.reset();
+        ts.value=Date.now();
+        resetTurnstile();
+        say("Mensaje enviado. Te responderé en 24-48 horas laborables. Revisa tu correo, te acabo de escribir.",false);
+      })
+      .catch(function(){
+        resetTurnstile();
+        say("No se pudo enviar. Revisa los datos e inténtalo de nuevo.",true);
+      })
+      .then(function(){
+        submitButton.disabled=false;
+        submitLabel.textContent=defaultSubmitLabel;
+      });
   });
   var toggle=document.getElementById("chatToggle"),panel=document.getElementById("chatPanel"),close=document.getElementById("chatClose");
   var chatForm=document.getElementById("chatForm"),chatInput=document.getElementById("chatInput"),messages=document.getElementById("chatMessages");
