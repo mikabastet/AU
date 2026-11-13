@@ -184,7 +184,8 @@ body>*:not(.ambient){position:relative;z-index:1}
 .top-link{color:var(--ink);padding:10px 16px;border:1px solid var(--line);border-radius:999px}
 .theme-toggle{display:grid;place-items:center;width:38px;height:38px;margin-left:14px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);font-size:1rem;cursor:pointer;transition:background .2s,transform .2s}
 .theme-toggle:hover{transform:rotate(12deg)}
-.hero{min-height:min(690px,calc(100svh - 76px));grid-template-columns:1.05fr .95fr;gap:clamp(28px,6vw,86px);padding:72px 0 78px}
+.hero{position:relative;isolation:isolate;min-height:min(690px,calc(100svh - 76px));grid-template-columns:1.05fr .95fr;gap:clamp(28px,6vw,86px);padding:72px 0 78px;transition:transform .32s ease}
+.hero::after{position:absolute;inset:8% 2%;z-index:-1;border-radius:32px;background:radial-gradient(ellipse at 50% 50%,#bb694e18,transparent 70%);content:"";opacity:0;pointer-events:none;transition:opacity .32s ease}
 .eyebrow{color:#d58b6f;font-size:.72rem;font-weight:650;letter-spacing:.13em;text-transform:uppercase}
 .eyebrow::before{width:6px;height:6px;box-shadow:0 0 14px #d58b6f}
 h1{max-width:680px;margin:22px 0;font-size:clamp(3.4rem,7.2vw,6.1rem);line-height:.96;letter-spacing:-.075em;font-weight:650}
@@ -322,12 +323,9 @@ h1 span{display:block;color:#ce8060}
 .services-section>.content-heading p{margin-right:auto;margin-left:auto}
 .pricing-statement{max-width:700px;margin:0;color:var(--ink);font-size:clamp(1.1rem,2.5vw,1.45rem);line-height:1.65}
 .pricing-note{margin:12px 0 0;color:var(--muted);font-size:.75rem}
-.pricing-statement,.pricing-note{margin-right:auto;margin-left:auto}
-.pricing-check{display:grid;place-items:center;width:42px;height:42px;margin:16px auto 0;border:1px solid #d58b6f66;border-radius:50%;background:#d58b6f12;color:#d58b6f;animation:checkPop .7s cubic-bezier(.2,.8,.2,1) both,checkGlow 2.8s .8s ease-in-out infinite}
-.pricing-check svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:24;animation:checkDraw .6s .35s ease-out forwards}
-@keyframes checkPop{0%{opacity:0;transform:scale(.6)}70%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
-@keyframes checkDraw{to{stroke-dashoffset:0}}
-@keyframes checkGlow{0%,100%{box-shadow:0 0 0 0 #d58b6f00}50%{box-shadow:0 0 0 7px #d58b6f12}}
+.pricing-statement,.pricing-note{margin-right:auto;margin-left:auto;text-align:center}
+.pricing-section>.content-heading .pricing-statement{width:100%;max-width:460px;margin:16px auto 0;padding:18px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--card) 76%,transparent);color:var(--ink);font-size:.94rem;line-height:1.6;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s}
+.pricing-section>.content-heading .pricing-note{max-width:480px;margin:12px auto 0;text-align:center}
 .method-panel>.content-heading p{margin-right:auto;margin-left:auto}
 .faq-list{max-width:780px;margin:0 auto}
 .projects-section{padding:24px 0 54px}
@@ -378,6 +376,7 @@ h1 span{display:block;color:#ce8060}
 .contact-form{width:100%;max-width:660px;margin:0 auto}
 .cf-turnstile{display:flex;justify-content:center}
 .privacy-brief{max-width:660px;margin-right:auto;margin-left:auto;text-align:center}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.hero:hover{transform:translateY(-3px)}.hero:hover::after{opacity:1}.pricing-section>.content-heading .pricing-statement:hover{transform:translateY(-3px);border-color:#bd765b88;box-shadow:0 12px 30px #0003}}
 </style>
 </head>
 <body>
@@ -466,7 +465,6 @@ h1 span{display:block;color:#ce8060}
 <div class="content-heading">
 <span class="eyebrow">Una referencia clara para empezar</span>
 <h2 id="precios-titulo">Tu negocio, desde 200 €.</h2>
-<span class="pricing-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7"/></svg></span>
 <p class="pricing-statement">El valor de un proyecto está en lo que aporta a tu negocio: más claridad para tus clientes, procesos más sencillos y tiempo para centrarte en lo importante.</p>
 <p class="pricing-note">Según el servicio y el alcance, los precios pueden variar. Recibirás una propuesta clara antes de empezar.</p>
 </div>
