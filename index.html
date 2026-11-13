@@ -318,11 +318,17 @@ h1 span{display:block;color:#ce8060}
 .about-facts strong{font-size:.8rem}
 .about-facts span{margin-top:5px;color:var(--muted);font-size:.72rem;line-height:1.5}
 .pricing-section{padding:34px 0 52px}
-.services-section>.content-heading,.pricing-section>.content-heading,.faq-section>.content-heading{margin-right:auto;margin-left:auto;text-align:center}
+.services-section>.content-heading,.pricing-section>.content-heading,.projects-section>.content-heading,.method-panel>.content-heading,.faq-section>.content-heading{margin-right:auto;margin-left:auto;text-align:center}
 .services-section>.content-heading p{margin-right:auto;margin-left:auto}
 .pricing-statement{max-width:700px;margin:0;color:var(--ink);font-size:clamp(1.1rem,2.5vw,1.45rem);line-height:1.65}
 .pricing-note{margin:12px 0 0;color:var(--muted);font-size:.75rem}
 .pricing-statement,.pricing-note{margin-right:auto;margin-left:auto}
+.pricing-check{display:grid;place-items:center;width:42px;height:42px;margin:16px auto 0;border:1px solid #d58b6f66;border-radius:50%;background:#d58b6f12;color:#d58b6f;animation:checkPop .7s cubic-bezier(.2,.8,.2,1) both,checkGlow 2.8s .8s ease-in-out infinite}
+.pricing-check svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:24;animation:checkDraw .6s .35s ease-out forwards}
+@keyframes checkPop{0%{opacity:0;transform:scale(.6)}70%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+@keyframes checkDraw{to{stroke-dashoffset:0}}
+@keyframes checkGlow{0%,100%{box-shadow:0 0 0 0 #d58b6f00}50%{box-shadow:0 0 0 7px #d58b6f12}}
+.method-panel>.content-heading p{margin-right:auto;margin-left:auto}
 .faq-list{max-width:780px;margin:0 auto}
 .projects-section{padding:24px 0 54px}
 .project-marquee{overflow:hidden;border:1px solid var(--line);border-radius:13px;background:color-mix(in srgb,var(--card) 74%,transparent)}
@@ -459,7 +465,8 @@ h1 span{display:block;color:#ce8060}
 <section class="wrap pricing-section" id="precios" aria-labelledby="precios-titulo">
 <div class="content-heading">
 <span class="eyebrow">Una referencia clara para empezar</span>
-<h2 id="precios-titulo">Tu negocio, desde 300 €.</h2>
+<h2 id="precios-titulo">Tu negocio, desde 200 €.</h2>
+<span class="pricing-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7"/></svg></span>
 <p class="pricing-statement">El valor de un proyecto está en lo que aporta a tu negocio: más claridad para tus clientes, procesos más sencillos y tiempo para centrarte en lo importante.</p>
 <p class="pricing-note">Según el servicio y el alcance, los precios pueden variar. Recibirás una propuesta clara antes de empezar.</p>
 </div>
