@@ -527,16 +527,13 @@ h1 span{display:block;color:#ce8060}
     submitLabel.textContent="Enviando...";
     say("",false);
     var datos=Object.fromEntries(new FormData(f));
-    console.log('[form] enviando',Object.keys(datos),'token:',!!datos['cf-turnstile-response']);
     fetch(WEBHOOK,{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify(datos)
     })
       .then(function(res){
-        console.log('[form] status',res.status);
         return res.text().then(function(text){
-          console.log('[form] respuesta',text);
           if(res.status!==200)throw new Error("Unexpected response status");
           return JSON.parse(text);
         });
@@ -548,8 +545,7 @@ h1 span{display:block;color:#ce8060}
         resetTurnstile();
         say("Mensaje enviado. Te responderé en 24-48 horas laborables. Revisa tu correo, te acabo de escribir.",false);
       })
-      .catch(function(err){
-        console.error('[form] error',err);
+      .catch(function(){
         resetTurnstile();
         say("No se pudo enviar. Revisa los datos e inténtalo de nuevo.",true);
       })
