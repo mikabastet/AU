@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline' https://challenges.cloudflare.com; img-src 'self' data:; connect-src 'self' data: https://vmi3162910.contaboserver.net https://chat-proxy.trescuatenta.workers.dev https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://ca1.cloudflarecaptcha.com https://ca2.cloudflarecaptcha.com https://dnstest.dev; frame-src https://challenges.cloudflare.com; worker-src blob:; base-uri 'none'; form-action 'self'; object-src 'none'">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="index, follow">
 <meta name="description" content="Diseño web en Madrid, automatización con n8n e integración de IA para negocios. Trabajo directamente contigo, sin intermediarios. 340.">
@@ -164,17 +165,18 @@ h1 span{display:block;color:var(--accent)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 :root{--bg:#171516;--ink:#f2ece6;--muted:#aaa09a;--line:#393333;--accent:#bb694e;--accent-dark:#99503c;--deep:#211c1d;--card:#211e1f;--soft:#302627;color-scheme:dark}
 :root[data-theme="light"]{--bg:#f4efe9;--ink:#26201f;--muted:#766c67;--line:#ded5cd;--accent:#a8503b;--accent-dark:#843e30;--deep:#ebe2d9;--card:#fffaf5;--soft:#eee2d8;color-scheme:light}
-html{scroll-padding-top:90px;overflow-x:hidden;overflow-x:clip}
+html{scroll-padding-top:90px}
 body{position:relative;min-width:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;transition:background .3s,color .3s}
 body>*:not(.ambient){position:relative;z-index:1}
-.ambient{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:radial-gradient(ellipse at 77% 26%,#6e38251c,transparent 37%),radial-gradient(ellipse at 12% 78%,#702e4015,transparent 36%),linear-gradient(120deg,transparent 30%,#bb694e06 50%,transparent 72%)}
+.ambient{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:radial-gradient(ellipse at 77% 26%,#6e38251c,transparent 72%),radial-gradient(ellipse at 12% 78%,#702e4015,transparent 72%),linear-gradient(120deg,transparent 30%,#bb694e06 50%,transparent 80%)}
 .ambient::before,.ambient::after{position:absolute;inset:-22%;content:"";pointer-events:none}
-.ambient::before{background:radial-gradient(ellipse at 50% 50%,transparent 39%,#bb694e0a 40%,transparent 64%);animation:orbitGlow 32s linear infinite}
+.ambient::before{background:radial-gradient(ellipse at 50% 50%,transparent 39%,#bb694e0a 40%,transparent 82%);animation:orbitGlow 32s linear infinite}
 .ambient::after{inset:0;opacity:.22;background-image:radial-gradient(#e9c5aa 1px,transparent 1.4px);background-size:94px 94px;mask-image:radial-gradient(ellipse at 56% 43%,#000,transparent 70%);animation:dustShift 34s linear infinite}
 .ambient-orb{position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(95px);opacity:.11;animation:orbDrift 18s ease-in-out infinite alternate}
 .orb-one{top:7%;right:5%;background:#c66c48}
 .orb-two{left:16%;bottom:-23%;width:320px;height:320px;background:#752c43;animation-delay:-8s}
-.topbar{position:sticky!important;top:0;z-index:20!important;width:min(1200px,calc(100% - 64px));height:76px;border-bottom:1px solid #ffffff12;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(18px)}
+.topbar{position:sticky!important;top:0;z-index:20!important;width:100%;height:auto;margin:0;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid color-mix(in srgb,var(--ink) 10%,transparent);border-radius:0;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(12px)}
+.topbar-inner{display:flex;width:min(1200px,calc(100% - 64px));height:76px;margin:0 auto;align-items:center;justify-content:space-between}
 .brand{gap:12px;color:var(--ink);font-size:.86rem;letter-spacing:.02em}
 .brand-mark{display:grid;place-items:center;flex:none;width:auto;height:auto;border-radius:0;color:var(--ink);font-size:1.55rem;font-weight:850;letter-spacing:-.11em}
 .brand-caption{padding-left:12px;border-left:1px solid var(--line);color:var(--muted);font-size:.66rem;font-weight:650;letter-spacing:.12em}
@@ -185,7 +187,7 @@ body>*:not(.ambient){position:relative;z-index:1}
 .theme-toggle{display:grid;place-items:center;width:38px;height:38px;margin-left:14px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);font-size:1rem;cursor:pointer;transition:background .2s,transform .2s}
 .theme-toggle:hover{transform:rotate(12deg)}
 .hero{position:relative;isolation:isolate;min-height:min(690px,calc(100svh - 76px));grid-template-columns:1.05fr .95fr;gap:clamp(28px,6vw,86px);padding:72px 0 78px;transition:transform .32s ease}
-.hero::after{position:absolute;inset:8% 2%;z-index:-1;border-radius:32px;background:radial-gradient(ellipse at 50% 50%,#bb694e18,transparent 70%);content:"";opacity:0;pointer-events:none;transition:opacity .32s ease}
+.hero::after{position:absolute;inset:8% 2%;z-index:-1;border-radius:32px;background:radial-gradient(ellipse at 50% 50%,#bb694e18,transparent 82%);content:"";opacity:0;pointer-events:none;transition:opacity .32s ease}
 .eyebrow{color:#d58b6f;font-size:.72rem;font-weight:650;letter-spacing:.13em;text-transform:uppercase}
 .eyebrow::before{width:6px;height:6px;box-shadow:0 0 14px #d58b6f}
 h1{max-width:680px;margin:22px 0;font-size:clamp(3.4rem,7.2vw,6.1rem);line-height:.96;letter-spacing:-.075em;font-weight:650}
@@ -197,8 +199,8 @@ h1 span{display:block;color:#ce8060}
 .button-secondary{color:var(--ink);font-size:.85rem;font-weight:600;text-decoration:none}
 .button-secondary:hover{color:#d58b6f}
 .microcopy{color:var(--muted);font-size:.77rem}
-.visual{min-height:390px;overflow:hidden}
-.visual::before{width:min(390px,85vw);height:min(390px,85vw);background:radial-gradient(circle,#9c523020 0,#8248300c 46%,transparent 71%);filter:blur(8px)}
+.visual{min-height:390px;overflow:visible}
+.visual::before{width:min(390px,85vw);height:min(390px,85vw);background:radial-gradient(circle,#9c523020 0,#8248300c 46%,transparent 82%);filter:blur(8px)}
 .constellation{position:absolute;inset:-2% -8%;width:116%;height:104%;overflow:visible;opacity:.72}
 .constellation path{fill:none;stroke:#c58a7070;stroke-width:1}
 .constellation circle{fill:#df9c79;filter:drop-shadow(0 0 5px #df9c79);animation:nodePulse 3.8s ease-in-out infinite alternate}
@@ -367,32 +369,192 @@ h1 span{display:block;color:#ce8060}
 :focus-visible{outline:3px solid #d58b6f;outline-offset:3px}
 @media(max-width:760px){.about-section{grid-template-columns:1fr;gap:24px;padding:40px 0 30px}.about-facts{grid-template-columns:1fr;gap:8px}.about-facts li{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}.about-facts span{margin:0;text-align:center}.pricing-section{padding:24px 0 35px}.projects-section{padding:14px 0 38px}.project-marquee-card{flex-basis:min(330px,calc(100vw - 72px))}.cookie-actions{flex-wrap:wrap}.cookie-actions button{min-width:calc(50% - 5px)}}
 @media(max-width:520px){.project-group{gap:10px;padding:10px}.project-marquee-card{min-height:132px;padding:16px}.cookie-banner{right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:10px;padding:16px}.cookie-actions{display:grid;grid-template-columns:1fr}.cookie-actions button{width:100%}}
-@media(prefers-reduced-motion:reduce){.project-track{width:100%;animation:none}.project-marquee{overflow:visible}.project-group:first-child{display:grid;width:100%;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));padding:12px}.project-group[aria-hidden="true"]{display:none}.project-marquee-card:hover{transform:none}}
-.contact-layout{max-width:860px;margin-right:auto;margin-left:auto;grid-template-columns:minmax(0,1fr)}
+@media(prefers-reduced-motion:reduce){.project-track{width:100%;animation:none}.project-marquee{overflow:hidden}.project-group:first-child{display:grid;width:100%;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));padding:12px}.project-group[aria-hidden="true"]{display:none}.project-marquee-card:hover{transform:none}}
+.contact-layout{max-width:1000px;margin-right:auto;margin-left:auto;grid-template-columns:minmax(0,1.18fr) minmax(280px,.82fr)}
 .contact-form-column{width:100%;max-width:700px;margin:0 auto}
-.contact-intro{text-align:center}
-.contact-intro p{margin-right:auto;margin-left:auto}
+.contact-intro{text-align:left}
+.contact-intro p{margin-right:0;margin-left:0}
 .offer-list{display:flex;flex-wrap:wrap;justify-content:center}
 .contact-form{width:100%;max-width:660px;margin:0 auto}
-.cf-turnstile{display:flex;justify-content:center}
+.cf-turnstile{display:flex;justify-content:flex-start}
 .privacy-brief{max-width:660px;margin-right:auto;margin-left:auto;text-align:center}
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.hero:hover{transform:translateY(-3px)}.hero:hover::after{opacity:1}.pricing-section>.content-heading .pricing-statement:hover{transform:translateY(-3px);border-color:#bd765b88;box-shadow:0 12px 30px #0003}}
+:root{box-sizing:border-box;padding-top:0}
+html{scroll-padding-top:0}
+[id]{scroll-margin-top:calc(84px + env(safe-area-inset-top,0px))}
+body{min-width:0;overflow-wrap:break-word;hyphens:none}
+img,video{max-width:100%;height:auto}
+h1,h2,h3{max-width:100%;text-wrap:balance;overflow-wrap:break-word;hyphens:none;line-height:1.15}
+h1,h2{hyphens:auto}
+main h1{max-width:680px;font-size:clamp(2rem,8vw,4rem);line-height:1.02;letter-spacing:-.065em}
+main h1 span{display:inline}
+main .content-heading h2,main .about-copy h2,main .contact-intro h2{max-width:720px;margin-right:auto;margin-left:auto;font-size:clamp(1.6rem,6vw,2.6rem);line-height:1.12;letter-spacing:-.05em}
+main .work-card h2{font-size:clamp(1.45rem,5vw,2rem);line-height:1.12}
+main .service-card h3,main .method-step h3{font-size:clamp(1rem,3.8vw,1.2rem);line-height:1.25}
+.topbar{top:0;padding-top:env(safe-area-inset-top,0px)}
+.brand{order:1}
+.top-nav{min-width:0}
+.top-nav{order:2}
+.theme-toggle{order:3}
+.nav-toggle,.menu-backdrop{display:none}
+.nav-toggle{order:4}
+.service-card,.method-step,.project-marquee-card,.contact-card,.contact-form{min-width:0}
+.legal-table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.legal-table{min-width:620px}
+.cf-turnstile{width:100%;max-width:100%;min-width:0;overflow:visible}
+.whatsapp-link{order:3}
+.whatsapp-note{order:4}
+.contact-form{order:2}
+.privacy-brief{order:5}
+.footer-top{min-width:0}
+.footer-top>span:last-child{white-space:normal}
+.theme-toggle:focus-visible,.nav-toggle:focus-visible,.top-nav a:focus-visible{outline:3px solid #d58b6f;outline-offset:3px}
+.menu-backdrop[hidden]{display:none}
+html:not(.js) .nav-toggle{display:none}
+.chat-toggle{bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+.chat-panel{width:min(360px,92vw);max-width:92vw;height:min(440px,calc(100dvh - 120px - env(safe-area-inset-bottom,0px)));max-height:calc(100dvh - 96px - env(safe-area-inset-top,0px))}
+.chat-toggle{transition:opacity .2s,transform .2s,background .2s}
+@media(max-width:859px){
+  .wrap{width:calc(100% - 32px)}
+  .topbar{height:auto;min-height:calc(64px + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px)}
+  .topbar-inner{width:calc(100% - 32px);height:auto;min-height:64px;flex-wrap:wrap;padding:0}
+  .brand{order:1;min-width:0}
+  .theme-toggle{order:2;width:44px;height:44px;min-width:44px;min-height:44px;margin:0 0 0 auto}
+  .nav-toggle{position:relative;order:3;display:grid;place-items:center;width:44px;height:44px;min-width:44px;margin-left:8px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);cursor:pointer}
+  .nav-toggle span,.nav-toggle::before,.nav-toggle::after{position:absolute;width:18px;height:2px;border-radius:2px;background:currentColor;content:"";transition:transform .2s,opacity .2s}
+  .nav-toggle::before{transform:translateY(-6px)}
+  .nav-toggle::after{transform:translateY(6px)}
+  .nav-toggle[aria-expanded="true"] span{opacity:0}
+  .nav-toggle[aria-expanded="true"]::before{transform:rotate(45deg)}
+  .nav-toggle[aria-expanded="true"]::after{transform:rotate(-45deg)}
+  .top-nav{position:static;order:4;display:flex;flex-basis:100%;flex-direction:column;align-items:stretch;gap:6px;width:100%;margin:0;padding:16px 0}
+  .top-nav a{display:flex;align-items:center;min-height:48px;padding:10px 14px;border-radius:8px;color:var(--ink);font-size:1rem}
+  .top-nav a:first-child,.top-nav a[href="#metodo"]{display:flex}
+  .top-nav a:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+  .top-nav .menu-cta{justify-content:center;margin-top:8px;border:0;background:var(--accent);color:#fff;font-weight:700}
+  .top-nav .menu-cta:hover{background:var(--accent-dark);color:#fff}
+  .js .topbar{height:auto;min-height:calc(64px + env(safe-area-inset-top,0px));padding-bottom:0}
+  .js .topbar-inner{height:64px;min-height:64px;flex-wrap:nowrap}
+  .js body.menu-open .topbar{backdrop-filter:none}
+  .js .top-nav{display:none}
+  .js .top-nav.is-open{position:fixed;top:calc(64px + env(safe-area-inset-top,0px));right:0;bottom:0;left:0;z-index:22;display:flex;justify-content:flex-start;overflow-y:auto;padding:clamp(24px,8vh,64px) 24px calc(24px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--bg);pointer-events:none}
+  .js .top-nav.is-open a{pointer-events:auto}
+  .js .menu-backdrop{position:fixed;inset:calc(64px + env(safe-area-inset-top,0px)) 0 0;z-index:21;display:block;width:100%;height:auto;border:0;background:#0007}
+  .js .menu-backdrop[hidden]{display:none}
+  .js body.menu-open{overflow:hidden}
+  .hero{min-height:0;grid-template-columns:minmax(0,1fr);gap:20px;padding:clamp(38px,8vw,64px) 0}
+  .hero>div:first-child{min-width:0}
+  .hero h1{font-size:clamp(2rem,8vw,4rem)}
+  .hero-copy{max-width:600px;font-size:1rem}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero-actions .button,.hero-actions .button-secondary{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;padding:12px 18px;border:1px solid var(--line);border-radius:8px;text-align:center}
+  .hero-actions .button{border-color:var(--accent);color:#fff}
+  .visual{min-height:clamp(280px,70vw,370px)}
+  .work-card{width:min(100%,460px)}
+  .services-section,.pricing-section,.projects-section,.method-section,.faq-section,.about-section{padding-top:clamp(34px,7vw,56px);padding-bottom:clamp(34px,7vw,56px)}
+  .service-grid,.method-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+  .service-card{min-height:0}
+  .method-panel{padding:clamp(18px,5vw,32px)}
+  .project-marquee{overflow:hidden}
+  .project-track{width:100%;animation:none}
+  .project-group:first-child{display:grid;width:100%;grid-template-columns:minmax(0,1fr);gap:12px;padding:12px}
+  .project-group[aria-hidden="true"]{display:none}
+  .project-marquee-card{width:100%;min-width:0;min-height:130px}
+  .contact{padding:clamp(34px,7vw,56px) 0}
+  .contact-card{grid-template-columns:minmax(0,1fr);gap:24px;padding:clamp(16px,5vw,28px)}
+  .contact-info{order:1;display:flex;min-width:0;flex-direction:column;align-items:stretch;gap:14px}
+  .contact-form-column{order:2;display:flex;min-width:0;flex-direction:column;gap:12px}
+  .contact-intro,.contact-intro p{text-align:left}
+  .contact-intro p{max-width:none}
+  .offer-list{display:grid;justify-content:stretch;gap:10px;margin-top:20px}
+  .offer-list li{align-items:flex-start}
+  .whatsapp-link{order:0;min-height:52px;margin-top:0}
+  .whatsapp-note{order:0;margin:0;text-align:left}
+  .contact-form{order:0;width:100%;max-width:none;padding:clamp(14px,4vw,20px)}
+  .privacy-brief{order:0}
+  .form-grid{grid-template-columns:minmax(0,1fr)}
+  .field.wide{grid-column:auto}
+  .field input,.field select,.field textarea{min-height:48px;font-size:16px}
+  .submit{min-height:52px}
+  .legal details[open]>div{position:fixed;top:calc(76px + env(safe-area-inset-top,0px));right:16px;bottom:calc(76px + env(safe-area-inset-bottom,0px));left:16px;width:auto;max-width:none;max-height:none;overflow:auto;overscroll-behavior:contain}
+  .footer-top{align-items:flex-start;flex-direction:column;gap:16px}
+  .legal{display:flex;flex-wrap:wrap;gap:10px 18px}
+  .chat-toggle{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+  body.whatsapp-visible .chat-toggle{opacity:0;pointer-events:none;transform:translateY(12px)}
+  .chat-panel{right:4vw;bottom:calc(72px + env(safe-area-inset-bottom,0px));width:92vw;max-width:92vw;height:min(440px,calc(100dvh - 100px - env(safe-area-inset-top,0px)));max-height:calc(100dvh - 100px - env(safe-area-inset-top,0px))}
+}
+@media(max-width:419px){.brand-caption{display:none}}
+@media(max-width:359px){.hero h1{font-size:clamp(1.9rem,8vw,2.45rem)}.work-card{padding:18px}.contact-card{padding:14px}.top-nav.is-open{padding-right:16px;padding-left:16px}}
+@media(prefers-reduced-motion:reduce){.project-track{width:100%;animation:none}.project-marquee{overflow:hidden}.project-group:first-child{display:grid;width:100%;grid-template-columns:minmax(0,1fr);padding:12px}.project-group[aria-hidden="true"]{display:none}.hero,.hero::after,.pricing-statement{transition:none!important}}
+
+:where(p,li,a,button,label,.service-card,.project-marquee-card,.privacy-brief){hyphens:none;overflow-wrap:break-word}
+#contacto{scroll-margin-top:calc(84px + env(safe-area-inset-top,0px))}
+.whatsapp-link{min-height:52px;background:#187a37;border-color:#187a37;color:#fff;white-space:nowrap}
+.whatsapp-link:hover{background:#176c32;border-color:#176c32;color:#fff}
+.whatsapp-link svg{flex:0 0 20px}
+.contact-form{min-width:0}
+.contact-form-column,.contact-info,.contact-card{min-width:0}
+.contact-info{display:flex;min-width:0;flex-direction:column;align-items:stretch;gap:14px}
+.contact-form-column{display:flex;min-width:0;flex-direction:column;gap:12px}
+.contact-intro,.contact-intro p{text-align:left}
+.contact-intro p{max-width:none}
+.constellation{inset:0;width:100%;max-width:100%}
+.offer-list{display:grid;justify-content:stretch;gap:10px;margin-top:20px}
+.offer-list li{align-items:flex-start}
+.field input,.field select,.field textarea{width:100%;box-sizing:border-box;min-height:48px;font-size:16px}
+.field textarea{min-height:140px;resize:vertical}
+.consent{align-items:flex-start;gap:10px}
+.consent input{flex:0 0 24px;width:24px;height:24px;min-width:24px;min-height:24px}
+.consent label{min-width:0;line-height:1.5}
+.form-grid{row-gap:16px}
+.field{gap:8px}
+.submit{min-height:52px}
+#s{min-height:1.55em;margin:8px 0 0;overflow-wrap:anywhere}
+.err{color:#ffb39e!important}
+:root[data-theme="light"] #s{color:#843e30}
+:root[data-theme="light"] .err{color:#9b3024!important}
+@media(max-width:859px){
+  .topbar{width:100%;max-width:none;margin:0;padding-right:0;padding-left:0}
+  .topbar-inner{width:calc(100% - 32px)}
+  .js .topbar-inner{height:64px;min-height:64px;flex-wrap:nowrap}
+}
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:minmax(0,1fr)}
+  .contact-info{order:1}
+  .contact-form-column{order:2}
+}
+@media(max-width:640px){
+  .contact .wrap{width:calc(100% - 32px)}
+  .contact-card{gap:20px;padding:16px;border-radius:14px}
+  .contact-form{padding:0;border:0;border-radius:0;background:transparent}
+  .consent{display:flex;font-size:.78rem}
+  .consent input{margin:0}
+  .submit{width:100%;margin-top:0;white-space:nowrap}
+  .privacy-brief{margin:0;padding:10px 0 0;border:0;border-top:1px solid #bd765b88;background:transparent;color:var(--ink);font-size:.76rem;text-align:left}
+  :root[data-theme="light"] .privacy-brief a{color:var(--accent-dark)}
+  .cf-turnstile{justify-content:flex-start}
+}
+@media(max-width:479px){.whatsapp-long{display:none}.whatsapp-short{display:inline}}
+@media(min-width:480px){.whatsapp-short{display:none}}
 </style>
 </head>
 <body>
 <div class="ambient" aria-hidden="true"><i class="ambient-orb orb-one"></i><i class="ambient-orb orb-two"></i></div>
-<header class="wrap topbar">
+<header class="topbar">
+<div class="topbar-inner">
 <a class="brand" href="#" aria-label="340, inicio"><span class="brand-mark">340</span><span class="brand-caption">WEB · AUTOMATIZACIÓN</span></a>
-<nav class="top-nav" aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#metodo">Cómo trabajo</a><a href="#contacto">Contacto</a></nav>
-<a class="top-link" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
-<button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar a tema claro" title="Cambiar tema">☼</button>
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar a tema claro" aria-pressed="false" title="Cambiar tema">☼</button>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú"><span aria-hidden="true"></span></button>
+<nav id="menu-principal" class="top-nav" aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#metodo">Cómo trabajo</a><a href="#contacto">Contacto</a><a class="top-link menu-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a></nav>
+</div>
+<button class="menu-backdrop" type="button" aria-label="Cerrar menú" hidden></button>
 </header>
 
 <main>
 <section class="wrap hero">
 <div>
 <span class="eyebrow">Estrategia digital práctica para negocios</span>
-<h1>Diseño web y<span>automatización en Madrid.</span></h1>
+<h1>Diseño web y <span>automatización en Madrid.</span></h1>
 <p class="hero-copy">Diseño webs que explican con claridad lo que haces y conecto tareas para reducir trabajo manual. Cada mejora se piensa según tus prioridades y presupuesto.</p>
 <div class="hero-actions"><a class="button" href="#contacto">Cuéntame tu reto <span class="button-arrow" aria-hidden="true">↗</span></a><a class="button-secondary" href="#servicios">Explorar servicios <span aria-hidden="true">↓</span></a></div>
 </div>
@@ -532,13 +694,20 @@ h1 span{display:block;color:#ce8060}
 
 <section class="contact" id="contacto">
 <div class="wrap contact-card contact-layout">
-<div class="contact-form-column">
+<div class="contact-info">
 <div class="contact-intro">
 <span class="eyebrow">El primer paso es una conversación</span>
 <h2>Hablemos de tu proyecto.</h2>
 <p>No hace falta tener la solución pensada. Cuéntame qué te preocupa y vemos qué tendría sentido para tu negocio.</p>
 <ul class="offer-list"><li>Una web más clara</li><li>Menos tareas manuales</li><li>Prioridades y presupuesto realistas</li></ul>
 </div>
+<a class="whatsapp-link" href="https://wa.me/34664633223?text=Hola%20Mika%2C%20vengo%20de%20tres40.dev%20y%20quiero%20hablar%20de%E2%80%A6" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.81 11.81 0 0 0 12.12 0C5.55 0 .2 5.34.2 11.92c0 2.1.55 4.15 1.6 5.96L.1 24l6.27-1.64a11.9 11.9 0 0 0 5.74 1.46h.01c6.57 0 11.92-5.35 11.92-11.92a11.82 11.82 0 0 0-3.52-8.42ZM12.12 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.88 9.88 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.91-9.92a9.85 9.85 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.94 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.81.38-.28.3-1.06 1.03-1.06 2.5s1.09 2.9 1.24 3.1c.15.2 2.14 3.27 5.18 4.59.72.31 1.28.5 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></svg>
+<span class="whatsapp-long">Hablemos de tu proyecto por WhatsApp</span><span class="whatsapp-short">Escríbeme por WhatsApp</span>
+</a>
+<p class="whatsapp-note">No envíes datos confidenciales por WhatsApp.</p>
+</div>
+<div class="contact-form-column">
 <form id="f" class="contact-form" autocomplete="on">
 <div class="form-grid">
 <div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" maxlength="80" autocomplete="name" placeholder="Nombre" required></div>
@@ -548,14 +717,9 @@ h1 span{display:block;color:#ce8060}
 <input class="hp" id="website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
 <input id="ts" name="ts" type="hidden">
 <div class="field wide consent"><input id="privacidad-check" name="privacidad" type="checkbox" value="true" required><label for="privacidad-check">He leído la <a href="#privacidad">Política de privacidad</a>.</label></div>
-<div class="cf-turnstile" data-sitekey="0x4AAAAAAF-cswaA7F01E_fP"></div>
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAF-cswaA7F01E_fP" data-size="flexible"></div>
 <button class="button submit" type="submit"><span id="submitLabel">Hablemos de tu proyecto</span> <span class="button-arrow" aria-hidden="true">↗</span></button>
 <p id="s" role="status" aria-live="polite"></p>
-<a class="whatsapp-link" href="https://wa.me/34664633223?text=Hola%20Mika%2C%20vengo%20de%20tres40.dev%20y%20quiero%20hablar%20de%E2%80%A6" target="_blank" rel="noopener noreferrer">
-<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.81 11.81 0 0 0 12.12 0C5.55 0 .2 5.34.2 11.92c0 2.1.55 4.15 1.6 5.96L.1 24l6.27-1.64a11.9 11.9 0 0 0 5.74 1.46h.01c6.57 0 11.92-5.35 11.92-11.92a11.82 11.82 0 0 0-3.52-8.42ZM12.12 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.88 9.88 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.91-9.92a9.85 9.85 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.94 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.81.38-.28.3-1.06 1.03-1.06 2.5s1.09 2.9 1.24 3.1c.15.2 2.14 3.27 5.18 4.59.72.31 1.28.5 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></svg>
-Hablemos de tu proyecto por WhatsApp
-</a>
-<p class="whatsapp-note">No envíes datos confidenciales por WhatsApp.</p>
 </form>
 <div class="privacy-brief" aria-label="Información básica de privacidad">
 <p><strong>Finalidad:</strong> responder a tu consulta y, si lo solicitas, preparar una propuesta.</p>
@@ -586,7 +750,7 @@ Hablemos de tu proyecto por WhatsApp
 <details id="privacidad"><summary>Privacidad</summary><div>
 <h3>Marco normativo</h3><p>Esta información se facilita conforme al Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</p>
 <h3>Responsable y contacto</h3><p>Responsable: Micaela Fernandez. NIF/NIE: <span data-config="legalNif">[COMPLETAR: NIF/NIE completo]</span>. Domicilio: <span data-config="legalAddress">Madrid, 28019 · [COMPLETAR: calle y número]</span>. Contacto para privacidad: <span data-config="legalEmail">[COMPLETAR: correo legal válido]</span>.</p>
-<h3>Datos y finalidad</h3><p>El formulario recoge nombre, email y mensaje; incluye además el campo trampa website, una marca de tiempo ts, el token técnico cf-turnstile-response y la casilla privacidad. Se usan para responder a tu consulta y, si lo pides, adoptar medidas precontractuales. La casilla confirma que has leído esta política; no sustituye la base jurídica aplicable. No incluyas datos sensibles ni información de otras personas.</p>
+<h3>Datos y finalidad</h3><p>El formulario recoge nombre, email y mensaje; además procesa datos técnicos para validar el envío y aplicar medidas anti-spam, y registra la confirmación de que has leído esta política. Se usan para responder a tu consulta y, si lo pides, adoptar medidas precontractuales. La casilla confirma que has leído esta política; no sustituye la base jurídica aplicable. No incluyas datos sensibles ni información de otras personas.</p>
 <p>El asistente de esta página transmite el texto que escribes y un identificador de sesión al servicio intermedio <span>chat-proxy.trescuatenta.workers.dev</span>. El proveedor de IA o servicio final utilizado por ese intermediario no es identificable en el código público: <span data-config="assistantProvider">[COMPLETAR: proveedor final del asistente de IA]</span>. El enlace de WhatsApp abre una conversación en WhatsApp; los mensajes que envíes allí son tratados por WhatsApp/Meta conforme a sus propias condiciones.</p>
 <h3>Base jurídica, conservación y gestión</h3><p>La base jurídica es atender tu solicitud y, cuando corresponda, aplicar medidas precontractuales que pidas. El formulario envía por HTTPS los datos a un webhook n8n alojado en un VPS de Contabo. Ubicación del servidor: <span data-config="vpsLocation">[COMPLETAR: ubicación del VPS]</span>. El navegador no envía correos directamente: cualquier aviso a la titular o confirmación automática al visitante depende de la configuración del flujo remoto y debe verificarse: <span data-config="emailFlow">[COMPLETAR: confirmar aviso interno y confirmación automática en n8n]</span>. El proveedor de correo es <span data-config="emailProvider">[COMPLETAR: proveedor de correo]</span>. Plazo de conservación: <span data-config="retentionPeriod">[COMPLETAR: plazo de conservación]</span>.</p>
 <h3>Medidas anti-spam y destinatarios</h3><p>El formulario incorpora Cloudflare Turnstile, que puede tratar datos técnicos, como dirección IP y señales del navegador, para verificar la interacción, y un campo trampa oculto. La existencia y duración de un límite de envíos por email y el almacenamiento temporal del email y la hora dependen del flujo remoto y no pueden confirmarse desde este código: <span data-config="emailRateLimit">[COMPLETAR: confirmar límite por email y tiempo de retención]</span>. Los proveedores identificables son Contabo (alojamiento), Cloudflare (Turnstile), el proveedor de correo pendiente de confirmar, y WhatsApp/Meta si eliges ese canal. No se venden datos ni se ceden a terceros para fines propios; los proveedores técnicos pueden tratarlos para prestar sus servicios.</p>
@@ -596,12 +760,12 @@ Hablemos de tu proyecto por WhatsApp
 </div></details>
 
 <details id="cookies"><summary>Cookies</summary><div>
-<h3>Qué utiliza este sitio</h3><p>El código de la web no crea cookies propias ni usa localStorage o sessionStorage para analítica o publicidad. La selección de tema solo cambia la página actual. No se cargan Google Fonts: se usan fuentes del sistema. Con la configuración actual <code>COOKIES_ANALITICA = false</code>, no se carga analítica ni se muestra el banner de consentimiento. No se usan tecnologías no esenciales antes de obtener consentimiento.</p>
+<h3>Qué utiliza este sitio</h3><p>Este sitio no crea cookies propias ni utiliza almacenamiento del navegador para analítica o publicidad. La selección de tema solo cambia la apariencia durante esta visita. No se cargan Google Fonts: se usan fuentes del sistema. Actualmente no se carga analítica ni se muestra el aviso de consentimiento. No se utilizan tecnologías opcionales antes de obtener consentimiento.</p>
 <div class="legal-table-wrap"><table class="legal-table"><thead><tr><th>Nombre</th><th>Proveedor</th><th>Finalidad</th><th>Duración</th><th>Tipo</th></tr></thead><tbody>
 <tr><td>No se detectaron cookies propias</td><td>340</td><td>El código no escribe cookies.</td><td>No aplica</td><td>No aplica</td></tr>
-<tr><td>localStorage / sessionStorage: ninguno en la configuración actual</td><td>340</td><td>No se almacena el tema, analítica ni publicidad.</td><td>No aplica</td><td>No aplica</td></tr>
-<tr><td>340-cookie-consent (localStorage, solo si se activa el banner)</td><td>340</td><td>Recordar la preferencia de cookies opcionales.</td><td>Hasta que se borre el almacenamiento del navegador.</td><td>Técnica, solo con COOKIES_ANALITICA = true.</td></tr>
-<tr><td>cf-turnstile-response (campo del formulario, no cookie)</td><td>Cloudflare</td><td>Token temporal para verificar la interacción anti-spam.</td><td>Temporal; el tiempo exacto depende de Cloudflare.</td><td>Técnica, no es una cookie.</td></tr>
+<tr><td>Almacenamiento del navegador para preferencias</td><td>340</td><td>No se guarda el tema ni datos de analítica o publicidad.</td><td>No aplica</td><td>No aplica</td></tr>
+<tr><td>Preferencia de cookies opcionales (almacenamiento local, solo si se activa el aviso)</td><td>340</td><td>Recordar la preferencia de cookies opcionales.</td><td>Hasta que se borre el almacenamiento del navegador.</td><td>Técnica, solo si se activa el aviso.</td></tr>
+<tr><td>Token temporal de verificación del formulario (no es una cookie)</td><td>Cloudflare</td><td>Token temporal para verificar la interacción anti-spam.</td><td>Temporal; el tiempo exacto depende de Cloudflare.</td><td>Técnica, no es una cookie.</td></tr>
 <tr><td>Cookies o almacenamiento de Turnstile</td><td>Cloudflare</td><td>La carga del widget puede usar tecnologías propias para seguridad; no se pudo completar una comprobación con el widget operativo.</td><td><span data-config="turnstileCookies">[COMPLETAR: verificar cookies con Turnstile operativo]</span></td><td>Técnica, si se instala.</td></tr>
 </tbody></table></div>
 <h3>Servicios externos</h3><p>El widget de Turnstile y el asistente conectan con servicios externos y pueden recibir datos técnicos como la IP. WhatsApp solo se abre si pulsas su enlace. No hay mapas, vídeos incrustados ni fuentes externas en el código. Los nombres y duraciones exactas de cualquier cookie de terceros deben comprobarse con el widget funcionando en producción.</p>
@@ -609,7 +773,7 @@ Hablemos de tu proyecto por WhatsApp
 </div></details>
 <a id="cookieSettingsLink" class="cookie-settings-link" href="#cookies" hidden>Configurar cookies</a>
 
-<span>© <span id="y"></span> · Todos los derechos reservados</span>
+<span>© <span id="y"></span> 340 · Todos los derechos reservados</span>
 </div>
 </footer>
 
@@ -676,11 +840,34 @@ Hablemos de tu proyecto por WhatsApp
     document.querySelector('meta[name="theme-color"]').content=light?"#f4efe9":"#171516";
     themeToggle.textContent=light?"☾":"☼";
     themeToggle.setAttribute("aria-label",light?"Cambiar a tema oscuro":"Cambiar a tema claro");
+    themeToggle.setAttribute("aria-pressed",String(light));
     themeToggle.title=light?"Cambiar a tema oscuro":"Cambiar a tema claro";
   });
+  var menu=document.getElementById("menu-principal"),menuToggle=document.querySelector(".nav-toggle"),menuBackdrop=document.querySelector(".menu-backdrop");
+  function setMenuOpen(open,restoreFocus){
+    menu.classList.toggle("is-open",open);
+    menuToggle.setAttribute("aria-expanded",String(open));
+    menuToggle.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú");
+    document.body.classList.toggle("menu-open",open);
+    menuBackdrop.hidden=!open;
+    if(open)menu.querySelector("a").focus();
+    else if(restoreFocus)menuToggle.focus();
+  }
+  menuToggle.addEventListener("click",function(){setMenuOpen(menuToggle.getAttribute("aria-expanded")!=="true",false)});
+  menu.addEventListener("click",function(event){if(event.target.closest("a"))setMenuOpen(false,false)});
+  menuBackdrop.addEventListener("click",function(){setMenuOpen(false,false)});
+  document.addEventListener("click",function(event){
+    if(menuToggle.getAttribute("aria-expanded")==="true"&&!menu.contains(event.target)&&!menuToggle.contains(event.target))setMenuOpen(false,false);
+  });
+  document.addEventListener("keydown",function(event){
+    if(event.key==="Escape"&&menuToggle.getAttribute("aria-expanded")==="true"){setMenuOpen(false,true)}
+  });
+  window.addEventListener("resize",function(){if(window.innerWidth>=860&&menuToggle.getAttribute("aria-expanded")==="true")setMenuOpen(false,false)});
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener("click",function(){
-      var d=document.querySelector(a.getAttribute("href"));
+      var hash=a.getAttribute("href");
+      if(hash.length<2)return;
+      var d=document.getElementById(hash.slice(1));
       if(d&&d.tagName==="DETAILS")d.open=true;
     });
   });
@@ -696,7 +883,7 @@ Hablemos de tu proyecto por WhatsApp
       if(!f.contains(document.activeElement)||!document.activeElement.matches("input:not([type=hidden]):not([type=checkbox]), textarea, select"))document.body.classList.remove("form-field-focused");
     },0);
   });
-  function say(t,e){s.textContent=t;s.className=e?"err":""}
+  function say(t,e){s.textContent=t;s.className=e?"err":"";if(t)s.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"})}
   function resetTurnstile(){if(window.turnstile)window.turnstile.reset()}
   f.addEventListener("submit",function(ev){
     ev.preventDefault();
@@ -733,6 +920,12 @@ Hablemos de tu proyecto por WhatsApp
   });
   var toggle=document.getElementById("chatToggle"),panel=document.getElementById("chatPanel"),close=document.getElementById("chatClose");
   var chatForm=document.getElementById("chatForm"),chatInput=document.getElementById("chatInput"),messages=document.getElementById("chatMessages");
+  var whatsappLink=document.querySelector(".whatsapp-link");
+  if(whatsappLink&&"IntersectionObserver" in window){
+    new IntersectionObserver(function(entries){
+      document.body.classList.toggle("whatsapp-visible",entries[0].isIntersecting);
+    },{threshold:.1}).observe(whatsappLink);
+  }
   var chatSession="web-"+(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random().toString(36).slice(2));
   function setChatOpen(open){
     panel.classList.toggle("open",open);
