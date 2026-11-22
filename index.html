@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline' https://challenges.cloudflare.com; img-src 'self' data:; connect-src 'self' data: https://vmi3162910.contaboserver.net https://chat-proxy.trescuatenta.workers.dev https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://ca1.cloudflarecaptcha.com https://ca2.cloudflarecaptcha.com https://dnstest.dev; frame-src https://challenges.cloudflare.com; worker-src blob:; base-uri 'none'; form-action 'self'; object-src 'none'">
-<script>document.documentElement.classList.add("js")</script>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self' https://challenges.cloudflare.com; font-src 'self'; img-src 'self' data:; connect-src 'self' data: https://vmi3162910.contaboserver.net https://chat-proxy.trescuatenta.workers.dev https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://ca1.cloudflarecaptcha.com https://ca2.cloudflarecaptcha.com https://dnstest.dev; frame-src https://challenges.cloudflare.com; worker-src blob:; base-uri 'none'; form-action 'self'; object-src 'none'">
+<script src="/boot.js"></script>
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="index, follow">
 <meta name="description" content="Diseño web en Madrid, automatización con n8n e integración de IA para negocios. Trabajo directamente contigo, sin intermediarios. 340.">
@@ -28,22 +28,7 @@
 <meta name="twitter:image" content="https://tres40.dev/og-image.png">
 <meta name="twitter:image:alt" content="340: diseño web, automatización práctica y análisis de procesos para negocios.">
 <title>Diseño web y automatización en Madrid | 340</title>
-<script>
-const SITE_CONFIG=Object.freeze({
-  legalNif:"[COMPLETAR: NIF/NIE completo]",
-  legalAddress:"Madrid, 28019 · [COMPLETAR: calle y número]",
-  legalEmail:"[COMPLETAR: correo legal válido]",
-  retentionPeriod:"[COMPLETAR: plazo de conservación]",
-  vpsLocation:"[COMPLETAR: ubicación del VPS]",
-  emailProvider:"[COMPLETAR: proveedor de correo]",
-  emailFlow:"[COMPLETAR: confirmar aviso interno y confirmación automática en n8n]",
-  assistantProvider:"[COMPLETAR: proveedor final del asistente de IA]",
-  emailRateLimit:"[COMPLETAR: confirmar límite por email y tiempo de retención]",
-  transferSafeguards:"[COMPLETAR: mecanismo y garantías para transferencias internacionales]",
-  turnstileCookies:"[COMPLETAR: verificar cookies con Turnstile operativo]"
-});
-const COOKIES_ANALITICA=false;
-</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,493 +37,23 @@ const COOKIES_ANALITICA=false;
   "url": "https://tres40.dev/",
   "description": "Diseño web, automatización con n8n e integración de IA para negocios en Madrid.",
   "image": "https://tres40.dev/og-image.png",
+  "telephone": "+34664633223",
   "areaServed": {"@type": "City", "name": "Madrid"},
   "serviceType": ["Diseño web", "Automatización de procesos con n8n", "Integración de IA en procesos de negocio", "Auditoría y mejora digital"]
 }
 </script>
-<style>
-:root{--bg:#f7f5f1;--ink:#202321;--muted:#686e69;--line:#dfdcd5;--accent:#bd5e3b;--accent-dark:#9e482c;--deep:#202623;--card:#fff;--soft:#f4e8df;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-behavior:smooth;scroll-padding-top:2rem}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-a{color:inherit}a:hover{color:var(--accent-dark)}
-.wrap{width:min(1120px,calc(100% - 48px));margin:0 auto}
-.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.brand{display:flex;gap:.65rem;align-items:center;font-size:.82rem;font-weight:850;letter-spacing:.1em;text-decoration:none}
-.brand-mark{display:inline-block;flex:0 0 28px;width:28px;height:28px;border-radius:8px}
-.top-link{font-weight:700;font-size:.9rem;text-decoration:none}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;padding:88px 0 86px}
-.eyebrow{display:inline-flex;align-items:center;gap:.55rem;color:var(--accent-dark);font-size:.76rem;font-weight:700;letter-spacing:.015em}
-.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
-h1{max-width:650px;margin:1rem 0;font-size:clamp(3.2rem,6.2vw,5.4rem);line-height:.98;letter-spacing:-.075em;font-weight:750}
-h1 span{display:block;color:var(--accent)}
-.hero-copy{max-width:460px;margin:1.25rem 0 1.6rem;color:var(--muted);font-size:1.08rem}
-.button{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:50px;padding:0 1.25rem;border:0;border-radius:99px;background:var(--accent);color:#fff;font:inherit;font-weight:650;text-decoration:none;cursor:pointer;transition:transform .18s,background .18s}
-.button:hover{transform:translateY(-2px);background:var(--accent-dark);color:white}
-.button-arrow{font-size:1.1rem}
-.microcopy{margin:.7rem 0 0;color:var(--muted);font-size:.82rem}
-.visual{position:relative;min-height:390px;display:grid;place-items:center;isolation:isolate}
-.visual::before{content:"";position:absolute;z-index:-1;width:310px;height:310px;border-radius:50%;background:radial-gradient(circle,#f0ddcf 0,#f4ebe4 54%,#f7f5f1 73%);animation:breath 8s ease-in-out infinite alternate}
-.work-card{position:relative;width:min(100%,390px);padding:30px;border:1px solid #e4e4e9;border-radius:24px;background:#fff;box-shadow:0 24px 70px #17172a12;animation:arrive .8s cubic-bezier(.2,.7,.2,1) both}
-.work-label{color:var(--accent-dark);font-size:.72rem;font-weight:750;letter-spacing:.08em}
-.work-card h2{max-width:290px;margin:14px 0 24px;font-size:clamp(1.7rem,3vw,2.25rem);line-height:1.08;letter-spacing:-.055em}
-.work-item{display:flex;align-items:center;gap:13px;padding:14px 0;border-top:1px solid #ececf0}
-.work-item-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:12px;background:var(--soft);color:var(--accent-dark);font-size:1rem}
-.work-item strong{display:block;font-size:.9rem}
-.work-item small{display:block;margin-top:2px;color:var(--muted);font-size:.77rem}
-.section{padding:44px 0 76px}
-.section-head{max-width:660px;margin-bottom:25px}
-.section-head h2{margin:.65rem 0;font-size:clamp(2rem,4vw,3rem);line-height:1.08;letter-spacing:-.055em}
-.section-head p{margin:0;color:var(--muted)}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.service{min-height:150px;padding:21px 22px;border:1px solid var(--line);border-radius:16px;background:#fff;animation:arrive .65s ease both}
-.service:nth-child(2){animation-delay:.1s}.service:nth-child(3){animation-delay:.2s}
-.service-icon{color:var(--accent);font-size:1.15rem}
-.service h3{margin:15px 0 5px;font-size:1rem;letter-spacing:-.02em}
-.service p{margin:0;color:var(--muted);font-size:.86rem}
-.web-section{padding:8px 0 30px}
-.web-card{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:clamp(26px,5vw,48px);border:1px solid #e8dfd3;border-radius:22px;background:#f0ebe3}
-.web-card h2{max-width:560px;margin:.75rem 0;font-size:clamp(2rem,4.4vw,3.35rem);line-height:1.02;letter-spacing:-.06em}
-.web-card p{max-width:520px;margin:0;color:var(--muted)}
-.web-link{display:inline-flex;margin-top:20px;color:var(--accent-dark);font-weight:750;text-decoration:none}
-.web-link:hover{text-decoration:underline}
-.web-points{display:grid;gap:10px}
-.web-point{display:flex;align-items:center;gap:14px;padding:15px 17px;border:1px solid #dfd7cc;border-radius:13px;background:#f8f6f2}
-.web-point span{color:var(--accent-dark);font-size:.72rem;font-weight:800;letter-spacing:.06em}
-.web-point strong{font-size:.88rem}
-@keyframes arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@keyframes breath{from{transform:scale(.94);opacity:.72}to{transform:scale(1.04);opacity:1}}
-.contact{padding:44px 0 80px}
-.contact-card{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;padding:42px;border-radius:22px;background:#1d1d1f;color:white}
-.contact-intro h2{margin:.9rem 0;font-size:clamp(2rem,4.2vw,3.5rem);line-height:1;letter-spacing:-.065em}
-.contact-intro p{max-width:320px;color:#c0cec4}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.field{display:grid;gap:6px}
-.field.wide{grid-column:1/-1}
-.field label{color:#edf2ed;font-size:.8rem;font-weight:700}
-.field input,.field select,.field textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid #54545a;border-radius:9px;background:#29292d;color:#fff;font:inherit;font-size:.87rem}
-.field select:invalid{color:#aaaab1}
-.field textarea{min-height:90px;resize:vertical}
-.field input::placeholder,.field textarea::placeholder{color:#aaaab1}
-.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #e29b7b;outline-offset:1px}
-.consent{display:flex;gap:9px;align-items:flex-start;margin:15px 0;color:#d0d9d1;font-size:.75rem}
-.consent input{margin-top:4px;accent-color:var(--accent)}
-.consent a{color:white}
-.submit{width:100%;background:var(--accent);color:#fff}
-.submit:hover{background:var(--accent-dark);color:#fff}
-#s{min-height:1.4em;margin:10px 0 0;color:#f0c2ae;font-size:.82rem}
-#s.err{color:#ffc7a6}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-:focus-visible{outline:3px solid #79934f;outline-offset:3px}
-.footer{padding:20px 0 30px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
-.footer-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.legal{display:flex;gap:18px}
-.legal details{position:relative}
-.legal summary{cursor:pointer;list-style:none}
-.legal summary::-webkit-details-marker{display:none}
-.legal summary::after{content:" +"}
-.legal details[open] summary::after{content:" −"}
-.legal details>div{position:absolute;z-index:3;right:0;bottom:calc(100% + 12px);width:min(420px,80vw);max-height:60vh;overflow:auto;padding:18px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 14px 40px #17231d20;color:var(--muted);font-size:.79rem}
-.legal h3{margin:1rem 0 .25rem;color:var(--ink)}
-.legal p{margin:.4rem 0}
-.ph{color:#a06335}
-.chat-toggle{position:fixed;right:24px;bottom:22px;z-index:9;display:flex;align-items:center;gap:9px;min-height:50px;padding:0 17px;border:0;border-radius:99px;background:#1d1d1f;color:#fff;font:inherit;font-weight:650;box-shadow:0 10px 28px #17172a22;cursor:pointer}
-.chat-toggle:hover{background:var(--accent-dark)}
-.chat-dot{width:9px;height:9px;border-radius:50%;background:#e8a385}
-.chat-panel{position:fixed;right:24px;bottom:86px;z-index:10;display:none;flex-direction:column;width:min(360px,calc(100vw - 32px));height:min(440px,calc(100dvh - 150px));overflow:hidden;border:1px solid #dfe7df;border-radius:18px;background:#fff;box-shadow:0 22px 70px #13281d35}
-.chat-panel.open{display:flex}
-.chat-head{display:flex;justify-content:space-between;align-items:center;padding:16px;background:#1d1d1f;color:#fff}
-.chat-head strong{display:block;font-size:.9rem}
-.chat-head small{color:#c6d3c8;font-size:.73rem}
-.chat-close{border:0;background:none;color:white;font-size:1.35rem;cursor:pointer}
-.chat-messages{display:flex;flex:1;flex-direction:column;gap:10px;overflow:auto;padding:15px}
-.chat-message{max-width:88%;padding:10px 12px;border-radius:13px;background:#f4e8df;color:var(--ink);font-size:.84rem;white-space:pre-wrap;overflow-wrap:anywhere}
-.chat-message.user{align-self:flex-end;background:#f1d8ca}
-.chat-message.error{background:#fff0e7;color:#874620}
-.chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
-.chat-form input{flex:1;min-width:0;padding:10px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:.84rem}
-.chat-form button{width:42px;border:0;border-radius:9px;background:var(--accent);color:#fff;font-size:1.1rem;cursor:pointer}
-.chat-form button:disabled{opacity:.5;cursor:wait}
-.chat-note{margin:0;padding:0 13px 10px;color:var(--muted);font-size:.68rem}
-@media(max-width:760px){.hero{grid-template-columns:1fr;gap:20px;padding:56px 0 42px}.visual{min-height:340px}.visual::before{width:280px;height:280px}.services{grid-template-columns:1fr}.service{min-height:0}.web-card{grid-template-columns:1fr;gap:24px}.web-section{padding:0 0 22px}.contact-card{grid-template-columns:1fr;gap:26px;padding:30px}.section{padding:38px 0 54px}.footer-top{align-items:flex-start;flex-direction:column}}
-@media(max-width:520px){.wrap{width:min(100% - 32px,1120px)}.topbar{height:62px}.brand{gap:.45rem;font-size:.72rem;letter-spacing:.07em}.brand-mark{flex-basis:25px;width:25px;height:25px}.top-link{font-size:.8rem}.hero{padding:36px 0 22px;gap:14px}h1{font-size:clamp(2.2rem,10.5vw,3.1rem)}.hero-copy{margin:1rem 0 1.3rem;font-size:.94rem}.button{min-height:46px;padding:0 1rem;font-size:.92rem}.microcopy{font-size:.78rem}.visual{min-height:285px}.visual::before{width:250px;height:250px}.work-card{padding:21px}.section{padding:30px 0 44px}.section-head{margin-bottom:20px}.section-head h2{font-size:clamp(1.7rem,8vw,2rem)}.web-section{padding:0 0 18px}.web-card{gap:18px;padding:23px}.web-card h2{font-size:clamp(1.8rem,8.5vw,2.25rem)}.contact{padding:30px 0 44px}.contact-card{gap:22px;padding:23px 18px}.contact-intro h2{font-size:clamp(1.85rem,9vw,2.3rem)}.footer-top{gap:14px}.legal{flex-wrap:wrap;gap:12px 16px}.chat-toggle{right:16px;bottom:16px}.chat-panel{right:16px;bottom:76px;height:min(380px,calc(100dvh - 150px))}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
-:root{--bg:#171516;--ink:#f2ece6;--muted:#aaa09a;--line:#393333;--accent:#bb694e;--accent-dark:#99503c;--deep:#211c1d;--card:#211e1f;--soft:#302627;color-scheme:dark}
-:root[data-theme="light"]{--bg:#f4efe9;--ink:#26201f;--muted:#766c67;--line:#ded5cd;--accent:#a8503b;--accent-dark:#843e30;--deep:#ebe2d9;--card:#fffaf5;--soft:#eee2d8;color-scheme:light}
-html{scroll-padding-top:90px}
-body{position:relative;min-width:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;transition:background .3s,color .3s}
-body>*:not(.ambient){position:relative;z-index:1}
-.ambient{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:radial-gradient(ellipse at 77% 26%,#6e38251c,transparent 72%),radial-gradient(ellipse at 12% 78%,#702e4015,transparent 72%),linear-gradient(120deg,transparent 30%,#bb694e06 50%,transparent 80%)}
-.ambient::before,.ambient::after{position:absolute;inset:-22%;content:"";pointer-events:none}
-.ambient::before{background:radial-gradient(ellipse at 50% 50%,transparent 39%,#bb694e0a 40%,transparent 82%);animation:orbitGlow 32s linear infinite}
-.ambient::after{inset:0;opacity:.22;background-image:radial-gradient(#e9c5aa 1px,transparent 1.4px);background-size:94px 94px;mask-image:radial-gradient(ellipse at 56% 43%,#000,transparent 70%);animation:dustShift 34s linear infinite}
-.ambient-orb{position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(95px);opacity:.11;animation:orbDrift 18s ease-in-out infinite alternate}
-.orb-one{top:7%;right:5%;background:#c66c48}
-.orb-two{left:16%;bottom:-23%;width:320px;height:320px;background:#752c43;animation-delay:-8s}
-.topbar{position:sticky!important;top:0;z-index:20!important;width:100%;height:auto;margin:0;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid color-mix(in srgb,var(--ink) 10%,transparent);border-radius:0;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(12px)}
-.topbar-inner{display:flex;width:min(1200px,calc(100% - 64px));height:76px;margin:0 auto;align-items:center;justify-content:space-between}
-.brand{gap:12px;color:var(--ink);font-size:.86rem;letter-spacing:.02em}
-.brand-mark{display:grid;place-items:center;flex:none;width:auto;height:auto;border-radius:0;color:var(--ink);font-size:1.55rem;font-weight:850;letter-spacing:-.11em}
-.brand-caption{padding-left:12px;border-left:1px solid var(--line);color:var(--muted);font-size:.66rem;font-weight:650;letter-spacing:.12em}
-.top-nav{display:flex;align-items:center;gap:26px;margin-left:auto;margin-right:28px}
-.top-nav a,.top-link{color:var(--muted);font-size:.82rem;font-weight:600;text-decoration:none;transition:color .2s}
-.top-nav a:hover,.top-link:hover{color:var(--ink)}
-.top-link{color:var(--ink);padding:10px 16px;border:1px solid var(--line);border-radius:999px}
-.theme-toggle{display:grid;place-items:center;width:38px;height:38px;margin-left:14px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);font-size:1rem;cursor:pointer;transition:background .2s,transform .2s}
-.theme-toggle:hover{transform:rotate(12deg)}
-.hero{position:relative;isolation:isolate;min-height:min(690px,calc(100svh - 76px));grid-template-columns:1.05fr .95fr;gap:clamp(28px,6vw,86px);padding:72px 0 78px;transition:transform .32s ease}
-.hero::after{position:absolute;inset:8% 2%;z-index:-1;border-radius:32px;background:radial-gradient(ellipse at 50% 50%,#bb694e18,transparent 82%);content:"";opacity:0;pointer-events:none;transition:opacity .32s ease}
-.eyebrow{color:#d58b6f;font-size:.72rem;font-weight:650;letter-spacing:.13em;text-transform:uppercase}
-.eyebrow::before{width:6px;height:6px;box-shadow:0 0 14px #d58b6f}
-h1{max-width:680px;margin:22px 0;font-size:clamp(3.4rem,7.2vw,6.1rem);line-height:.96;letter-spacing:-.075em;font-weight:650}
-h1 span{display:block;color:#ce8060}
-.hero-copy{max-width:500px;margin:0 0 27px;color:var(--muted);font-size:1.05rem;line-height:1.75}
-.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.button{min-height:49px;padding:0 21px;border-radius:7px;background:#a95540;color:#fff;font-size:.9rem;font-weight:650;box-shadow:0 8px 34px #a9554024}
-.button:hover{background:#c27356;color:white;transform:translateY(-2px)}
-.button-secondary{color:var(--ink);font-size:.85rem;font-weight:600;text-decoration:none}
-.button-secondary:hover{color:#d58b6f}
-.microcopy{color:var(--muted);font-size:.77rem}
-.visual{min-height:390px;overflow:visible}
-.visual::before{width:min(390px,85vw);height:min(390px,85vw);background:radial-gradient(circle,#9c523020 0,#8248300c 46%,transparent 82%);filter:blur(8px)}
-.constellation{position:absolute;inset:-2% -8%;width:116%;height:104%;overflow:visible;opacity:.72}
-.constellation path{fill:none;stroke:#c58a7070;stroke-width:1}
-.constellation circle{fill:#df9c79;filter:drop-shadow(0 0 5px #df9c79);animation:nodePulse 3.8s ease-in-out infinite alternate}
-.constellation circle:nth-of-type(2n){animation-delay:-1.6s}
-.work-card{width:min(100%,390px);padding:26px;border:1px solid #ffffff1a;border-radius:12px;background:linear-gradient(145deg,#282222eF,#1d1a1bdc);box-shadow:0 25px 90px #0005;backdrop-filter:blur(12px);animation:arrive .8s cubic-bezier(.2,.7,.2,1) both}
-:root[data-theme="light"] .work-card{border-color:#6b45321d;background:linear-gradient(145deg,#fffaf5ed,#f1e8e0e8);box-shadow:0 25px 90px #64452518}
-.work-label{color:#d58b6f;font-size:.67rem;font-weight:650;letter-spacing:.13em}
-.work-card h2{max-width:290px;margin:13px 0 19px;font-size:clamp(1.5rem,2.5vw,1.9rem);line-height:1.12;letter-spacing:-.045em}
-.work-item{gap:12px;padding:12px 0;border-color:#ffffff12}
-.work-item-icon{flex-basis:34px;height:34px;border-radius:9px;background:#9d50341f;color:#df9777}
-.work-item strong{font-size:.82rem}
-.work-item small{color:var(--muted);font-size:.72rem}
-.marquee{position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#ffffff05}
-.marquee-track{display:flex;width:max-content;animation:marqueeSlide 32s linear infinite}
-.marquee-group{display:flex;align-items:center;gap:33px;padding:17px 17px 17px 0;white-space:nowrap}
-.marquee-item{display:flex;align-items:center;gap:30px;color:var(--muted);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-.marquee-item::after{content:"·";color:#c77a5a;font-size:1.2rem}
-.marquee:hover .marquee-track{animation-play-state:paused}
-.contact{padding:86px 0 92px}
-.contact-card{grid-template-columns:.82fr 1.18fr;gap:clamp(28px,6vw,80px);padding:clamp(26px,5vw,56px);border:1px solid #ffffff14;border-radius:14px;background:linear-gradient(135deg,#242020eF,#1b1919eF);box-shadow:0 30px 100px #0002}
-:root[data-theme="light"] .contact-card{border-color:#583a2a1c;background:linear-gradient(135deg,#fffaf5,#eee5dc);box-shadow:0 30px 100px #64452512}
-.contact-intro h2{margin:15px 0;font-size:clamp(2rem,4.2vw,3.45rem);line-height:1.03;letter-spacing:-.06em}
-.contact-intro p{max-width:360px;color:var(--muted);font-size:.94rem;line-height:1.7}
-.offer-list{display:grid;gap:13px;margin:30px 0 0;padding:0;list-style:none}
-.offer-list li{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.84rem}
-.offer-list li::before{display:grid;place-items:center;flex:0 0 24px;height:24px;border:1px solid #bd765b55;border-radius:50%;color:#d58b6f;content:"↗";font-size:.76rem}
-.contact-form{padding:25px;border:1px solid #ffffff12;border-radius:10px;background:#17151655}
-:root[data-theme="light"] .contact-form{border-color:#583a2a16;background:#fff9f48c}
-.form-grid{gap:12px}
-.field{gap:6px}
-.field label{color:var(--muted);font-size:.74rem;font-weight:600}
-.field input,.field select,.field textarea{min-height:43px;padding:9px 11px;border-color:#ffffff1a;border-radius:6px;background:#ffffff08;color:var(--ink);font-size:.83rem}
-:root[data-theme="light"] .field input,:root[data-theme="light"] .field select,:root[data-theme="light"] .field textarea{border-color:#60412c24;background:#fffaf5;color:var(--ink)}
-.field select:invalid{color:var(--muted)}
-.field textarea{min-height:76px}
-.field input::placeholder,.field textarea::placeholder{color:#968983}
-.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #c47a5c;outline-offset:1px}
-.consent{color:var(--muted);font-size:.7rem}
-.consent a{color:#d58b6f}
-.submit{width:100%;margin-top:4px}
-#s{color:#e1a58d}
-.footer{padding:20px 0 28px;border-color:var(--line);color:var(--muted)}
-.footer-top{font-size:.76rem}
-.legal{gap:16px}
-.legal summary{color:var(--muted)}
-.legal details>div{border-color:var(--line);background:var(--card);box-shadow:0 14px 40px #0004;color:var(--muted)}
-.legal h3{color:var(--ink)}
-.ph{color:#d58b6f}
-.chat-toggle,.chat-panel{position:fixed!important}
-.chat-toggle{background:#a95540;color:white;box-shadow:0 10px 28px #0004}
-.chat-toggle:hover{background:#c27356}
-.chat-dot{background:#e2a083}
-.chat-panel{border-color:#ffffff20;background:#211e1f;box-shadow:0 22px 70px #0008}
-:root[data-theme="light"] .chat-panel{border-color:var(--line);background:var(--card)}
-.chat-head{background:#302526;color:var(--ink)}
-:root[data-theme="light"] .chat-head{background:#eee2d8;color:var(--ink)}
-.chat-head small{color:var(--muted)}
-.chat-message{background:#352a29;color:var(--ink)}
-:root[data-theme="light"] .chat-message{background:#f4e8df}
-.chat-message.user{background:#5b372d;color:#fff}
-:root[data-theme="light"] .chat-message.user{background:#f1d8ca;color:var(--ink)}
-.chat-message.error{background:#402b27;color:#f1b49c}
-:root[data-theme="light"] .chat-message.error{background:#fff0e7;color:#874620}
-.chat-form{border-color:var(--line)}
-.chat-form input{border-color:var(--line);background:var(--bg);color:var(--ink)}
-.chat-note{color:var(--muted)}
-@keyframes marqueeSlide{to{transform:translateX(-50%)}}
-@keyframes orbitGlow{to{transform:rotate(360deg)}}
-@keyframes dustShift{to{background-position:188px 94px}}
-@keyframes orbDrift{from{transform:translate3d(-18px,-12px,0) scale(.92)}to{transform:translate3d(35px,24px,0) scale(1.12)}}
-@keyframes nodePulse{from{opacity:.35}to{opacity:1}}
-@media(max-width:760px){.topbar{width:calc(100% - 36px);height:68px}.top-nav{gap:16px;margin-right:16px}.hero{min-height:0;grid-template-columns:1fr;gap:8px;padding:56px 0 28px}.hero-copy{max-width:560px}.visual{min-height:320px}.contact{padding:52px 0 62px}.contact-card{grid-template-columns:1fr;gap:28px}.offer-list{grid-template-columns:1fr 1fr}.section,.web-section{display:none}}
-@media(max-width:520px){.topbar{width:calc(100% - 32px);height:62px}.brand{gap:8px;font-size:.8rem}.brand-caption{padding-left:8px;font-size:.53rem}.top-nav{gap:0;margin-right:8px}.top-nav a:first-child{display:none}.top-nav a{font-size:.72rem}.top-link{display:none}.theme-toggle{width:34px;height:34px;margin-left:0}.hero{padding:48px 0 14px}.hero h1{font-size:clamp(2.75rem,12.5vw,3.8rem)}.hero-copy{font-size:.93rem;line-height:1.65}.hero-actions{gap:14px}.visual{min-height:285px}.visual::before{width:260px;height:260px}.constellation{inset:0 -8%;width:116%;height:100%}.work-card{padding:21px}.marquee-group{gap:20px;padding:14px 12px 14px 0}.marquee-item{gap:20px;font-size:.64rem}.contact{padding:38px 0 48px}.contact-card{padding:22px 17px}.contact-intro h2{font-size:clamp(2rem,9vw,2.55rem)}.offer-list{grid-template-columns:1fr;gap:10px;margin-top:22px}.contact-form{padding:17px}.form-grid{grid-template-columns:1fr}.field.wide{grid-column:auto}.footer-top{align-items:flex-start;flex-direction:column}.legal{flex-wrap:wrap;gap:12px 16px}.chat-toggle{right:14px;bottom:14px}.chat-panel{right:12px;bottom:72px;width:min(360px,calc(100vw - 40px));height:min(370px,calc(100dvh - 130px))}}
-@media(prefers-reduced-motion:reduce){.ambient::before,.ambient::after,.ambient-orb,.constellation circle,.marquee-track{animation:none!important}.marquee-track{transform:none}}
-.brand-mark{font-family:"Baskerville","Palatino Linotype",Georgia,serif;font-size:1.8rem;font-weight:400;letter-spacing:.015em}
-.legal details>div{line-height:1.65}
-@media(max-width:760px){.legal details[open]>div{position:fixed;left:16px;right:16px;bottom:calc(76px + env(safe-area-inset-bottom,0px));width:auto;max-height:min(62dvh,560px);z-index:30;padding:18px}}
-@media(max-width:520px){.brand-mark{font-size:1.65rem}}
-.services-section{padding:62px 0 34px}
-.content-heading{max-width:680px;margin-bottom:28px}
-.content-heading h2{margin:12px 0;font-size:clamp(2rem,4vw,3rem);line-height:1.08;letter-spacing:-.055em;font-weight:550}
-.content-heading p{max-width:550px;margin:0;color:var(--muted);font-size:.95rem;line-height:1.7}
-.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.service-card{min-height:235px;padding:25px;border:1px solid var(--line);border-radius:13px;background:var(--card);transition:transform .2s,border-color .2s}
-.service-card:hover{transform:translateY(-3px);border-color:#bd765b88}
-.service-label{color:#d58b6f;font-size:.68rem;font-weight:650;letter-spacing:.12em;text-transform:uppercase}
-.service-card h3{margin:25px 0 9px;font-size:1.15rem;font-weight:600;letter-spacing:-.025em}
-.service-card p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.7}
-.service-tags{display:block;margin-top:18px;color:var(--muted);font-size:.7rem;letter-spacing:.04em}
-.method-section{padding:34px 0}
-.method-panel{padding:clamp(25px,5vw,45px);border:1px solid var(--line);border-radius:14px;background:var(--card)}
-.method-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.method-step{padding-top:17px;border-top:1px solid var(--line)}
-.method-step span{color:#d58b6f;font-size:.68rem;font-weight:650;letter-spacing:.12em}
-.method-step h3{margin:15px 0 7px;font-size:1.05rem;font-weight:600}
-.method-step p{margin:0;color:var(--muted);font-size:.85rem;line-height:1.7}
-.faq-section{padding:32px 0 68px}
-.faq-list{border-top:1px solid var(--line)}
-.faq-list details{border-bottom:1px solid var(--line)}
-.faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 2px;color:var(--ink);font-size:.95rem;font-weight:600;cursor:pointer;list-style:none}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary::after{color:#d58b6f;content:"+";font-size:1.2rem;font-weight:400}
-.faq-list details[open] summary::after{content:"−"}
-.faq-list details p{max-width:680px;margin:0;padding:0 24px 18px 2px;color:var(--muted);font-size:.86rem;line-height:1.7}
-@media(max-width:760px){.services-section{padding:45px 0 24px}.service-grid,.method-grid{grid-template-columns:1fr;gap:12px}.service-card{min-height:0;padding:22px}.service-card h3{margin:17px 0 8px}.method-section{padding:24px 0}.method-panel{padding:23px}.method-grid{gap:20px}.faq-section{padding:24px 0 48px}}
-@media(max-width:520px){.content-heading h2{font-size:clamp(1.8rem,8vw,2.25rem)}.faq-list summary{font-size:.9rem}.brand-caption{padding-left:6px;font-size:.48rem;letter-spacing:.08em}.top-nav{gap:10px}.top-nav a[href="#metodo"]{display:none}}
-@media(max-width:360px){.brand-caption{display:none}}
-@media(max-width:760px){.chat-form input{font-size:16px}}
-@media(max-width:760px){.field input,.field select,.field textarea{font-size:16px}.form-field-focused .chat-toggle{display:none}}
-@media(max-width:520px){.chat-panel{right:16px;bottom:calc(72px + env(safe-area-inset-bottom,0px));width:min(320px,calc(100vw - 48px));height:min(320px,48vh);height:min(320px,48dvh);max-height:calc(100dvh - 120px);border-radius:16px}}
-.about-section{display:grid;grid-template-columns:minmax(0,1fr);align-items:center;padding:56px 0 42px}
-.about-copy{max-width:820px;margin:0 auto;text-align:center}
-.about-copy h2{margin:12px 0;font-size:clamp(2rem,4vw,3.1rem);line-height:1.05;letter-spacing:-.055em;font-weight:550}
-.about-copy p{max-width:680px;margin-right:auto;margin-left:auto;color:var(--muted);font-size:.94rem;line-height:1.75}
-.about-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 0;padding:0;list-style:none}
-.about-facts li{padding:14px;border:1px solid var(--line);border-radius:9px;background:color-mix(in srgb,var(--card) 78%,transparent);text-align:center}
-.about-facts strong,.about-facts span{display:block}
-.about-facts strong{font-size:.8rem}
-.about-facts span{margin-top:5px;color:var(--muted);font-size:.72rem;line-height:1.5}
-.pricing-section{padding:34px 0 52px}
-.services-section>.content-heading,.pricing-section>.content-heading,.projects-section>.content-heading,.method-panel>.content-heading,.faq-section>.content-heading{margin-right:auto;margin-left:auto;text-align:center}
-.services-section>.content-heading p{margin-right:auto;margin-left:auto}
-.pricing-statement{max-width:700px;margin:0;color:var(--ink);font-size:clamp(1.1rem,2.5vw,1.45rem);line-height:1.65}
-.pricing-note{margin:12px 0 0;color:var(--muted);font-size:.75rem}
-.pricing-statement,.pricing-note{margin-right:auto;margin-left:auto;text-align:center}
-.pricing-section>.content-heading .pricing-statement{width:100%;max-width:460px;margin:16px auto 0;padding:18px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--card) 76%,transparent);color:var(--ink);font-size:.94rem;line-height:1.6;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s}
-.pricing-section>.content-heading .pricing-note{max-width:480px;margin:12px auto 0;text-align:center}
-.method-panel>.content-heading p{margin-right:auto;margin-left:auto}
-.faq-list{max-width:780px;margin:0 auto}
-.projects-section{padding:24px 0 54px}
-.project-marquee{overflow:hidden;border:1px solid var(--line);border-radius:13px;background:color-mix(in srgb,var(--card) 74%,transparent)}
-.project-track{display:flex;width:max-content;animation:projectsSlide 38s linear infinite}
-.project-group{display:flex;gap:14px;padding:14px}
-.project-marquee:hover .project-track,.project-marquee:focus-within .project-track{animation-play-state:paused}
-.project-marquee-card{display:flex;flex:0 0 330px;flex-direction:column;justify-content:space-between;min-height:145px;padding:19px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
-.project-marquee-card:hover{transform:translateY(-2px);border-color:#bd765b88}
-.project-marquee-card span{color:#d58b6f;font-size:.65rem;font-weight:650;letter-spacing:.13em;text-transform:uppercase}
-.project-marquee-card strong{margin:14px 0 5px;font-size:1rem}
-.project-marquee-card small{color:var(--muted);font-size:.76rem;line-height:1.55}
-.whatsapp-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:47px;margin-top:12px;padding:0 17px;border:1px solid #32a852;border-radius:7px;background:#218c43;color:#fff;font-size:.87rem;font-weight:650;text-decoration:none;transition:background .2s,border-color .2s}
-.whatsapp-link:hover{border-color:#47c568;background:#27a34f;color:#fff}
-.whatsapp-link svg{width:20px;height:20px;fill:currentColor}
-.whatsapp-note{margin:8px 0 0;color:var(--muted);font-size:.7rem;text-align:center}
-.privacy-brief{margin-top:12px;padding:12px 13px;border-left:2px solid #bd765b88;background:#ffffff06;color:var(--muted);font-size:.72rem;line-height:1.65}
-.privacy-brief p{margin:4px 0}
-.privacy-brief a{color:#d58b6f}
-.consent{align-items:flex-start}
-.consent input{flex:0 0 auto;width:16px;height:16px}
-.consent label{line-height:1.5}
-.legal-table-wrap{max-width:100%;overflow-x:auto}
-.legal-table{width:100%;border-collapse:collapse;font-size:.7rem}
-.legal-table th,.legal-table td{padding:8px;border:1px solid var(--line);text-align:left;vertical-align:top}
-.legal-table th{color:var(--ink);font-weight:650}
-.cookie-banner{position:fixed;right:16px;bottom:16px;left:16px;z-index:40;max-width:980px;margin:0 auto;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--card);box-shadow:0 18px 60px #0007;color:var(--ink)}
-.cookie-banner[hidden],.cookie-settings-link[hidden]{display:none}
-.cookie-banner h2{margin:0 0 6px;font-size:1rem}
-.cookie-banner p{margin:0;color:var(--muted);font-size:.8rem;line-height:1.55}
-.cookie-actions{display:flex;gap:9px;margin-top:14px}
-.cookie-actions button{flex:1;min-height:42px;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font:inherit;font-size:.77rem;font-weight:650;cursor:pointer}
-.cookie-actions button:hover{border-color:#bd765b;color:#d58b6f}
-.cookie-preferences{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}
-.cookie-preferences[hidden]{display:none}
-.cookie-preferences label{display:flex;align-items:center;gap:8px}
-.cookie-settings-link{color:var(--muted);font-size:.76rem}
-@keyframes projectsSlide{to{transform:translateX(-50%)}}
-:focus-visible{outline:3px solid #d58b6f;outline-offset:3px}
-@media(max-width:760px){.about-section{grid-template-columns:1fr;gap:24px;padding:40px 0 30px}.about-facts{grid-template-columns:1fr;gap:8px}.about-facts li{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}.about-facts span{margin:0;text-align:center}.pricing-section{padding:24px 0 35px}.projects-section{padding:14px 0 38px}.project-marquee-card{flex-basis:min(330px,calc(100vw - 72px))}.cookie-actions{flex-wrap:wrap}.cookie-actions button{min-width:calc(50% - 5px)}}
-@media(max-width:520px){.project-group{gap:10px;padding:10px}.project-marquee-card{min-height:132px;padding:16px}.cookie-banner{right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:10px;padding:16px}.cookie-actions{display:grid;grid-template-columns:1fr}.cookie-actions button{width:100%}}
-@media(prefers-reduced-motion:reduce){.project-track{width:100%;animation:none}.project-marquee{overflow:hidden}.project-group:first-child{display:grid;width:100%;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));padding:12px}.project-group[aria-hidden="true"]{display:none}.project-marquee-card:hover{transform:none}}
-.contact-layout{max-width:1000px;margin-right:auto;margin-left:auto;grid-template-columns:minmax(0,1.18fr) minmax(280px,.82fr)}
-.contact-form-column{width:100%;max-width:700px;margin:0 auto}
-.contact-intro{text-align:left}
-.contact-intro p{margin-right:0;margin-left:0}
-.offer-list{display:flex;flex-wrap:wrap;justify-content:center}
-.contact-form{width:100%;max-width:660px;margin:0 auto}
-.cf-turnstile{display:flex;justify-content:flex-start}
-.privacy-brief{max-width:660px;margin-right:auto;margin-left:auto;text-align:center}
-@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.hero:hover{transform:translateY(-3px)}.hero:hover::after{opacity:1}.pricing-section>.content-heading .pricing-statement:hover{transform:translateY(-3px);border-color:#bd765b88;box-shadow:0 12px 30px #0003}}
-:root{box-sizing:border-box;padding-top:0}
-html{scroll-padding-top:0}
-[id]{scroll-margin-top:calc(84px + env(safe-area-inset-top,0px))}
-body{min-width:0;overflow-wrap:break-word;hyphens:none}
-img,video{max-width:100%;height:auto}
-h1,h2,h3{max-width:100%;text-wrap:balance;overflow-wrap:break-word;hyphens:none;line-height:1.15}
-h1,h2{hyphens:auto}
-main h1{max-width:680px;font-size:clamp(2rem,8vw,4rem);line-height:1.02;letter-spacing:-.065em}
-main h1 span{display:inline}
-main .content-heading h2,main .about-copy h2,main .contact-intro h2{max-width:720px;margin-right:auto;margin-left:auto;font-size:clamp(1.6rem,6vw,2.6rem);line-height:1.12;letter-spacing:-.05em}
-main .work-card h2{font-size:clamp(1.45rem,5vw,2rem);line-height:1.12}
-main .service-card h3,main .method-step h3{font-size:clamp(1rem,3.8vw,1.2rem);line-height:1.25}
-.topbar{top:0;padding-top:env(safe-area-inset-top,0px)}
-.brand{order:1}
-.top-nav{min-width:0}
-.top-nav{order:2}
-.theme-toggle{order:3}
-.nav-toggle,.menu-backdrop{display:none}
-.nav-toggle{order:4}
-.service-card,.method-step,.project-marquee-card,.contact-card,.contact-form{min-width:0}
-.legal-table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
-.legal-table{min-width:620px}
-.cf-turnstile{width:100%;max-width:100%;min-width:0;overflow:visible}
-.whatsapp-link{order:3}
-.whatsapp-note{order:4}
-.contact-form{order:2}
-.privacy-brief{order:5}
-.footer-top{min-width:0}
-.footer-top>span:last-child{white-space:normal}
-.theme-toggle:focus-visible,.nav-toggle:focus-visible,.top-nav a:focus-visible{outline:3px solid #d58b6f;outline-offset:3px}
-.menu-backdrop[hidden]{display:none}
-html:not(.js) .nav-toggle{display:none}
-.chat-toggle{bottom:calc(16px + env(safe-area-inset-bottom,0px))}
-.chat-panel{width:min(360px,92vw);max-width:92vw;height:min(440px,calc(100dvh - 120px - env(safe-area-inset-bottom,0px)));max-height:calc(100dvh - 96px - env(safe-area-inset-top,0px))}
-.chat-toggle{transition:opacity .2s,transform .2s,background .2s}
-@media(max-width:859px){
-  .wrap{width:calc(100% - 32px)}
-  .topbar{height:auto;min-height:calc(64px + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px)}
-  .topbar-inner{width:calc(100% - 32px);height:auto;min-height:64px;flex-wrap:wrap;padding:0}
-  .brand{order:1;min-width:0}
-  .theme-toggle{order:2;width:44px;height:44px;min-width:44px;min-height:44px;margin:0 0 0 auto}
-  .nav-toggle{position:relative;order:3;display:grid;place-items:center;width:44px;height:44px;min-width:44px;margin-left:8px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);cursor:pointer}
-  .nav-toggle span,.nav-toggle::before,.nav-toggle::after{position:absolute;width:18px;height:2px;border-radius:2px;background:currentColor;content:"";transition:transform .2s,opacity .2s}
-  .nav-toggle::before{transform:translateY(-6px)}
-  .nav-toggle::after{transform:translateY(6px)}
-  .nav-toggle[aria-expanded="true"] span{opacity:0}
-  .nav-toggle[aria-expanded="true"]::before{transform:rotate(45deg)}
-  .nav-toggle[aria-expanded="true"]::after{transform:rotate(-45deg)}
-  .top-nav{position:static;order:4;display:flex;flex-basis:100%;flex-direction:column;align-items:stretch;gap:6px;width:100%;margin:0;padding:16px 0}
-  .top-nav a{display:flex;align-items:center;min-height:48px;padding:10px 14px;border-radius:8px;color:var(--ink);font-size:1rem}
-  .top-nav a:first-child,.top-nav a[href="#metodo"]{display:flex}
-  .top-nav a:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
-  .top-nav .menu-cta{justify-content:center;margin-top:8px;border:0;background:var(--accent);color:#fff;font-weight:700}
-  .top-nav .menu-cta:hover{background:var(--accent-dark);color:#fff}
-  .js .topbar{height:auto;min-height:calc(64px + env(safe-area-inset-top,0px));padding-bottom:0}
-  .js .topbar-inner{height:64px;min-height:64px;flex-wrap:nowrap}
-  .js body.menu-open .topbar{backdrop-filter:none}
-  .js .top-nav{display:none}
-  .js .top-nav.is-open{position:fixed;top:calc(64px + env(safe-area-inset-top,0px));right:0;bottom:0;left:0;z-index:22;display:flex;justify-content:flex-start;overflow-y:auto;padding:clamp(24px,8vh,64px) 24px calc(24px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--bg);pointer-events:none}
-  .js .top-nav.is-open a{pointer-events:auto}
-  .js .menu-backdrop{position:fixed;inset:calc(64px + env(safe-area-inset-top,0px)) 0 0;z-index:21;display:block;width:100%;height:auto;border:0;background:#0007}
-  .js .menu-backdrop[hidden]{display:none}
-  .js body.menu-open{overflow:hidden}
-  .hero{min-height:0;grid-template-columns:minmax(0,1fr);gap:20px;padding:clamp(38px,8vw,64px) 0}
-  .hero>div:first-child{min-width:0}
-  .hero h1{font-size:clamp(2rem,8vw,4rem)}
-  .hero-copy{max-width:600px;font-size:1rem}
-  .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
-  .hero-actions .button,.hero-actions .button-secondary{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;padding:12px 18px;border:1px solid var(--line);border-radius:8px;text-align:center}
-  .hero-actions .button{border-color:var(--accent);color:#fff}
-  .visual{min-height:clamp(280px,70vw,370px)}
-  .work-card{width:min(100%,460px)}
-  .services-section,.pricing-section,.projects-section,.method-section,.faq-section,.about-section{padding-top:clamp(34px,7vw,56px);padding-bottom:clamp(34px,7vw,56px)}
-  .service-grid,.method-grid{grid-template-columns:minmax(0,1fr);gap:14px}
-  .service-card{min-height:0}
-  .method-panel{padding:clamp(18px,5vw,32px)}
-  .project-marquee{overflow:hidden}
-  .project-track{width:100%;animation:none}
-  .project-group:first-child{display:grid;width:100%;grid-template-columns:minmax(0,1fr);gap:12px;padding:12px}
-  .project-group[aria-hidden="true"]{display:none}
-  .project-marquee-card{width:100%;min-width:0;min-height:130px}
-  .contact{padding:clamp(34px,7vw,56px) 0}
-  .contact-card{grid-template-columns:minmax(0,1fr);gap:24px;padding:clamp(16px,5vw,28px)}
-  .contact-info{order:1;display:flex;min-width:0;flex-direction:column;align-items:stretch;gap:14px}
-  .contact-form-column{order:2;display:flex;min-width:0;flex-direction:column;gap:12px}
-  .contact-intro,.contact-intro p{text-align:left}
-  .contact-intro p{max-width:none}
-  .offer-list{display:grid;justify-content:stretch;gap:10px;margin-top:20px}
-  .offer-list li{align-items:flex-start}
-  .whatsapp-link{order:0;min-height:52px;margin-top:0}
-  .whatsapp-note{order:0;margin:0;text-align:left}
-  .contact-form{order:0;width:100%;max-width:none;padding:clamp(14px,4vw,20px)}
-  .privacy-brief{order:0}
-  .form-grid{grid-template-columns:minmax(0,1fr)}
-  .field.wide{grid-column:auto}
-  .field input,.field select,.field textarea{min-height:48px;font-size:16px}
-  .submit{min-height:52px}
-  .legal details[open]>div{position:fixed;top:calc(76px + env(safe-area-inset-top,0px));right:16px;bottom:calc(76px + env(safe-area-inset-bottom,0px));left:16px;width:auto;max-width:none;max-height:none;overflow:auto;overscroll-behavior:contain}
-  .footer-top{align-items:flex-start;flex-direction:column;gap:16px}
-  .legal{display:flex;flex-wrap:wrap;gap:10px 18px}
-  .chat-toggle{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}
-  body.whatsapp-visible .chat-toggle{opacity:0;pointer-events:none;transform:translateY(12px)}
-  .chat-panel{right:4vw;bottom:calc(72px + env(safe-area-inset-bottom,0px));width:92vw;max-width:92vw;height:min(440px,calc(100dvh - 100px - env(safe-area-inset-top,0px)));max-height:calc(100dvh - 100px - env(safe-area-inset-top,0px))}
-}
-@media(max-width:419px){.brand-caption{display:none}}
-@media(max-width:359px){.hero h1{font-size:clamp(1.9rem,8vw,2.45rem)}.work-card{padding:18px}.contact-card{padding:14px}.top-nav.is-open{padding-right:16px;padding-left:16px}}
-@media(prefers-reduced-motion:reduce){.project-track{width:100%;animation:none}.project-marquee{overflow:hidden}.project-group:first-child{display:grid;width:100%;grid-template-columns:minmax(0,1fr);padding:12px}.project-group[aria-hidden="true"]{display:none}.hero,.hero::after,.pricing-statement{transition:none!important}}
-
-:where(p,li,a,button,label,.service-card,.project-marquee-card,.privacy-brief){hyphens:none;overflow-wrap:break-word}
-#contacto{scroll-margin-top:calc(84px + env(safe-area-inset-top,0px))}
-.whatsapp-link{min-height:52px;background:#187a37;border-color:#187a37;color:#fff;white-space:nowrap}
-.whatsapp-link:hover{background:#176c32;border-color:#176c32;color:#fff}
-.whatsapp-link svg{flex:0 0 20px}
-.contact-form{min-width:0}
-.contact-form-column,.contact-info,.contact-card{min-width:0}
-.contact-info{display:flex;min-width:0;flex-direction:column;align-items:stretch;gap:14px}
-.contact-form-column{display:flex;min-width:0;flex-direction:column;gap:12px}
-.contact-intro,.contact-intro p{text-align:left}
-.contact-intro p{max-width:none}
-.constellation{inset:0;width:100%;max-width:100%}
-.offer-list{display:grid;justify-content:stretch;gap:10px;margin-top:20px}
-.offer-list li{align-items:flex-start}
-.field input,.field select,.field textarea{width:100%;box-sizing:border-box;min-height:48px;font-size:16px}
-.field textarea{min-height:140px;resize:vertical}
-.consent{align-items:flex-start;gap:10px}
-.consent input{flex:0 0 24px;width:24px;height:24px;min-width:24px;min-height:24px}
-.consent label{min-width:0;line-height:1.5}
-.form-grid{row-gap:16px}
-.field{gap:8px}
-.submit{min-height:52px}
-#s{min-height:1.55em;margin:8px 0 0;overflow-wrap:anywhere}
-.err{color:#ffb39e!important}
-:root[data-theme="light"] #s{color:#843e30}
-:root[data-theme="light"] .err{color:#9b3024!important}
-@media(max-width:859px){
-  .topbar{width:100%;max-width:none;margin:0;padding-right:0;padding-left:0}
-  .topbar-inner{width:calc(100% - 32px)}
-  .js .topbar-inner{height:64px;min-height:64px;flex-wrap:nowrap}
-}
-@media(max-width:900px){
-  .contact-layout{grid-template-columns:minmax(0,1fr)}
-  .contact-info{order:1}
-  .contact-form-column{order:2}
-}
-@media(max-width:640px){
-  .contact .wrap{width:calc(100% - 32px)}
-  .contact-card{gap:20px;padding:16px;border-radius:14px}
-  .contact-form{padding:0;border:0;border-radius:0;background:transparent}
-  .consent{display:flex;font-size:.78rem}
-  .consent input{margin:0}
-  .submit{width:100%;margin-top:0;white-space:nowrap}
-  .privacy-brief{margin:0;padding:10px 0 0;border:0;border-top:1px solid #bd765b88;background:transparent;color:var(--ink);font-size:.76rem;text-align:left}
-  :root[data-theme="light"] .privacy-brief a{color:var(--accent-dark)}
-  .cf-turnstile{justify-content:flex-start}
-}
-@media(max-width:479px){.whatsapp-long{display:none}.whatsapp-short{display:inline}}
-@media(min-width:480px){.whatsapp-short{display:none}}
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<div class="intro340" id="intro340">
+  <div class="i-flow" aria-hidden="true">
+    <div class="i-node i-n1">Pedido</div><div class="i-link i-l1"><span class="i-dot"></span></div>
+    <div class="i-node i-hub"><span>340</span></div><div class="i-link i-l2"><span class="i-dot"></span></div>
+    <div class="i-node i-n3">Factura</div>
+  </div>
+  <button type="button" class="i-skip" id="introSkip">Saltar</button>
+</div>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 <div class="ambient" aria-hidden="true"><i class="ambient-orb orb-one"></i><i class="ambient-orb orb-two"></i></div>
 <header class="topbar">
 <div class="topbar-inner">
@@ -550,40 +65,42 @@ html:not(.js) .nav-toggle{display:none}
 <button class="menu-backdrop" type="button" aria-label="Cerrar menú" hidden></button>
 </header>
 
-<main>
-<section class="wrap hero">
-<div>
-<span class="eyebrow">Estrategia digital práctica para negocios</span>
-<h1>Diseño web y <span>automatización en Madrid.</span></h1>
-<p class="hero-copy">Diseño webs que explican con claridad lo que haces y conecto tareas para reducir trabajo manual. Cada mejora se piensa según tus prioridades y presupuesto.</p>
-<div class="hero-actions"><a class="button" href="#contacto">Cuéntame tu reto <span class="button-arrow" aria-hidden="true">↗</span></a><a class="button-secondary" href="#servicios">Explorar servicios <span aria-hidden="true">↓</span></a></div>
+<main id="contenido">
+<section class="wrap hero" aria-labelledby="hero-title">
+<div class="hero-content">
+<span class="eyebrow">Para empresas y pymes</span>
+<h1 id="hero-title">Diseño web y automatización para pymes <span>en Madrid</span></h1>
+<p class="hero-copy">Tu web y tus procesos, conectados.</p>
+<div class="hero-actions">
+<a class="button" href="#contacto">Hablemos <span class="button-arrow" aria-hidden="true">↗</span></a>
+<a class="button-secondary" href="#proyectos">Ver proyectos</a>
+<button class="button-tertiary" id="heroChatOpen" type="button" aria-controls="chatPanel">Probar el asistente</button>
 </div>
-<div class="visual">
-<svg class="constellation" viewBox="0 0 480 420" fill="none" aria-hidden="true">
-<path d="M56 228 138 139 224 185 292 88 398 150M56 228l93 111 75-154 94 126 80-161M138 139l11 200m75-154 103-97-9 223m9-223 81 62"/>
-<circle cx="56" cy="228" r="3"/><circle cx="138" cy="139" r="4"/><circle cx="224" cy="185" r="3"/><circle cx="292" cy="88" r="4"/><circle cx="398" cy="150" r="3"/><circle cx="149" cy="339" r="3"/><circle cx="243" cy="311" r="4"/><circle cx="317" cy="214" r="3"/><circle cx="398" cy="311" r="4"/>
+<ul class="hero-chips" aria-label="Cómo trabajo"><li>Trato directo</li><li>Presupuesto cerrado</li><li>Sin intermediarios</li></ul>
+</div>
+<div class="hero-flow reveal" aria-hidden="true">
+<svg viewBox="0 0 680 210" role="presentation">
+<path class="flow-line" d="M168 105h142m60 0h142"/>
+<circle class="flow-pulse" cx="238" cy="105" r="6"/>
+<circle class="flow-pulse flow-pulse-late" cx="422" cy="105" r="6"/>
+<rect class="flow-node" x="20" y="55" width="148" height="100" rx="22"/>
+<rect class="flow-hub" x="310" y="40" width="100" height="130" rx="28"/>
+<rect class="flow-node" x="512" y="55" width="148" height="100" rx="22"/>
+<text class="flow-label" x="94" y="111" text-anchor="middle">Pedido</text>
+<text class="flow-logo" x="360" y="115" text-anchor="middle">340</text>
+<text class="flow-label" x="586" y="111" text-anchor="middle">Factura</text>
 </svg>
-<div class="work-card">
-<span class="work-label">MENOS FRICCIÓN. MÁS CLARIDAD.</span>
-<h2>Tecnología al servicio del negocio.</h2>
-<div class="work-item"><span class="work-item-icon" aria-hidden="true">01</span><span><strong>Explica mejor lo que ofreces</strong><small>Una web clara, útil y fácil de recorrer.</small></span></div>
-<div class="work-item"><span class="work-item-icon" aria-hidden="true">02</span><span><strong>Reduce pasos repetitivos</strong><small>Procesos conectados con sentido.</small></span></div>
-<div class="work-item"><span class="work-item-icon" aria-hidden="true">03</span><span><strong>Prioriza lo que importa</strong><small>Mejoras ajustadas a tu situación.</small></span></div>
-</div>
 </div>
 </section>
 
 <section class="wrap about-section" id="quien-soy" aria-labelledby="sobre-mi-titulo">
-<div class="about-copy">
-<span class="eyebrow">Quién soy y qué hago</span>
-<h2 id="sobre-mi-titulo">Hola, soy Mika.</h2>
-<p>Me gusta la tecnología, sobre todo cuando sirve para hacer las cosas más sencillas. Por eso desarrollo webs claras, automatizo tareas repetitivas con herramientas como n8n e integro IA en procesos de negocio.</p>
-<p>Disfruto buscando soluciones prácticas: entender qué está quitando tiempo, ordenar el problema y encontrar una manera útil de resolverlo. No se trata de añadir herramientas porque sí, sino de que cada mejora tenga sentido para el negocio.</p>
-<p>Trabajo directamente con cada cliente, sin intermediarios, desde Madrid. Escucho lo que necesitas, explico las opciones con claridad y construimos una solución que puedas usar de verdad.</p>
-<ul class="about-facts" aria-label="Sobre mi trabajo">
-<li><strong>Madrid</strong><span>España</span></li>
-<li><strong>Trato directo</strong><span>Sin intermediarios</span></li>
-<li><strong>Web · n8n · IA</strong><span>Soluciones según cada necesidad</span></li>
+<div class="about-copy reveal">
+<div class="avatar" role="img" aria-label="Inicial M de Mika"><span class="avatar-initial" aria-hidden="true">M</span><img class="avatar-photo" src="/img/mika.webp" width="320" height="320" loading="lazy" decoding="async" alt="Retrato de Mika"></div>
+<span class="eyebrow">Quién soy</span>
+<h2 id="sobre-mi-titulo">Tecnología útil. Trato directo.</h2>
+<p>Diseño webs y conecto procesos para que el trabajo diario sea más sencillo. Trabajo contigo, desde Madrid, y priorizo lo que aporta valor.</p>
+<ul class="about-facts" aria-label="Datos de trabajo">
+<li>Madrid</li><li>Trato directo</li><li>Web, n8n e IA</li>
 </ul>
 </div>
 </section>
@@ -595,86 +112,128 @@ html:not(.js) .nav-toggle{display:none}
 </div>
 </div>
 
+<section class="wrap sectors-section reveal" id="sectores" aria-labelledby="sectores-titulo">
+<div class="content-heading">
+<span class="eyebrow">Para quién</span>
+<h2 id="sectores-titulo">Soluciones para tu sector</h2>
+</div>
+<ul class="sector-chips" data-sectors aria-label="Sectores">
+<li>Turismo y alquileres</li><li>Hostelería</li><li>Comercio</li><li>Servicios profesionales</li>
+</ul>
+</section>
+
 <section class="wrap services-section" id="servicios" aria-labelledby="servicios-titulo">
 <div class="content-heading">
-<span class="eyebrow">Qué puede mejorar 340</span>
-<h2 id="servicios-titulo">Lo digital tiene que resolver algo real.</h2>
-<p>Un servicio concreto o una combinación de ellos: empezamos por lo que tu negocio necesita ahora.</p>
+<span class="eyebrow">Servicios digitales</span>
+<h2 id="servicios-titulo">Tecnología que trabaja contigo</h2>
+<p>Elige lo que necesita tu negocio.</p>
 </div>
 <div class="service-grid">
-<article class="service-card">
+<article class="service-card reveal">
+<span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M7 13h5M7 16h9"/></svg></span>
 <span class="service-label">01 · PRESENCIA DIGITAL</span>
 <h3>Diseño web</h3>
-<p>Una web clara y adaptada a móvil para presentar tu oferta, transmitir confianza y facilitar el contacto.</p>
-<span class="service-tags">Estructura · Diseño · Desarrollo</span>
+<p>Explica tu oferta y facilita el contacto.</p>
 </article>
-<article class="service-card">
+<article class="service-card reveal">
+<span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M7 6h7a5 5 0 0 1 5 5v5M5 8v8h12"/></svg></span>
 <span class="service-label">02 · PROCESOS</span>
-<h3>Automatización práctica</h3>
-<p>Conecto tareas y herramientas para reducir pasos manuales y hacer más sencillo el trabajo cotidiano.</p>
-<span class="service-tags">Tareas repetitivas · Integraciones · Flujos</span>
+<h3>Automatización</h3>
+<p>Conecta herramientas y reduce tareas manuales.</p>
 </article>
-<article class="service-card">
-<span class="service-label">03 · ANÁLISIS</span>
-<h3>Auditoría y mejora</h3>
-<p>Reviso tu web, tus procesos o una propuesta concreta. Priorizo mejoras por utilidad, esfuerzo y presupuesto.</p>
-<span class="service-tags">Revisión · Prioridades · Próximos pasos</span>
+<article class="service-card reveal">
+<span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></svg></span>
+<span class="service-label">03 · INTELIGENCIA ARTIFICIAL</span>
+<h3>Integración de IA</h3>
+<p>Integra IA en procesos de negocio.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M8 10.5h5M10.5 8v5"/></svg></span>
+<span class="service-label">04 · ANÁLISIS</span>
+<h3>Auditoría digital</h3>
+<p>Prioriza mejoras por utilidad y esfuerzo.</p>
 </article>
 </div>
 </section>
 
 <section class="wrap pricing-section" id="precios" aria-labelledby="precios-titulo">
-<div class="content-heading">
-<span class="eyebrow">Una referencia clara para empezar</span>
-<h2 id="precios-titulo">Tu negocio, desde 200 €.</h2>
-<p class="pricing-statement">El valor de un proyecto está en lo que aporta a tu negocio: más claridad para tus clientes, procesos más sencillos y tiempo para centrarte en lo importante.</p>
-<p class="pricing-note">Según el servicio y el alcance, los precios pueden variar. Recibirás una propuesta clara antes de empezar.</p>
+<div class="content-heading reveal">
+<span class="eyebrow">Precios transparentes</span>
+<h2 id="precios-titulo">Precios claros para empezar</h2>
 </div>
+<div class="price-grid">
+<article class="price-card price-card-feature reveal">
+<span class="price-icon" aria-hidden="true">↗</span><span class="price-label">DISEÑO WEB</span>
+<h3>Tu negocio,<br>desde 200 €</h3>
+<span class="price-value">Presupuesto cerrado</span>
+</article>
+<article class="price-card reveal" data-price-index="0">
+<span class="price-icon" aria-hidden="true">⤳</span><span class="price-label">PROCESOS</span>
+<h3>Automatización</h3><strong class="price-value">A medida</strong>
+</article>
+<article class="price-card reveal" data-price-index="1">
+<span class="price-icon" aria-hidden="true">✳</span><span class="price-label">INTELIGENCIA ARTIFICIAL</span>
+<h3>Integración de IA</h3><strong class="price-value">A medida</strong>
+</article>
+</div>
+<p class="pricing-note">Presupuesto cerrado antes de empezar</p>
+<p class="pricing-note" data-legal-block hidden>Los precios tienen el IVA <span data-config="vatStatus"></span>.</p>
 </section>
 
 <section class="wrap projects-section" id="proyectos" aria-labelledby="proyectos-titulo">
-<div class="content-heading">
-<span class="eyebrow">Trabajo realizado</span>
-<h2 id="proyectos-titulo">Proyectos con los que he trabajado</h2>
+<div class="content-heading reveal">
+<span class="eyebrow">Proyectos reales</span>
+<h2 id="proyectos-titulo">Trabajo digital, en la práctica</h2>
 </div>
-<div class="marquee project-marquee" role="region" aria-label="Proyectos en movimiento">
-<div class="project-track">
-<div class="project-group">
-<a class="project-marquee-card" href="https://mar-y-arena.com/" target="_blank" rel="noopener noreferrer"><span>Proyecto real</span><strong>Apartamentos Mar &amp; Arena</strong><small>Web de alquiler vacacional en la costa, con asistente de WhatsApp.</small></a>
-<a class="project-marquee-card" href="https://nuxsolutions.netlify.app/" target="_blank" rel="noopener noreferrer"><span>Proyecto real</span><strong>Nux Solutions</strong><small>Landing pages responsive para presentar proyectos y facilitar consultas o reservas.</small></a>
-<article class="project-marquee-card"><span>Proyecto real</span><strong>Casino Imagine Live</strong><small>Automatización de formación sobre juegos.</small></article>
+<div class="project-grid" role="list" aria-label="Proyectos">
+<a class="project-card reveal" role="listitem" href="https://mar-y-arena.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Apartamentos Mar &amp; Arena (se abre en pestaña nueva)">
+<div class="project-preview">
+<div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>mar-y-arena.com</span></div>
+<div class="preview-fallback" aria-hidden="true"><span class="preview-mark">Mar &amp; Arena</span><span>Alquiler vacacional</span></div>
+<img class="project-shot" src="/img/mar-y-arena-desktop.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Vista previa del sitio web de Apartamentos Mar y Arena">
 </div>
-<div class="project-group" aria-hidden="true" inert>
-<a class="project-marquee-card" href="https://mar-y-arena.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><span>Proyecto real</span><strong>Apartamentos Mar &amp; Arena</strong><small>Web de alquiler vacacional en la costa, con asistente de WhatsApp.</small></a>
-<a class="project-marquee-card" href="https://nuxsolutions.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="-1"><span>Proyecto real</span><strong>Nux Solutions</strong><small>Landing pages responsive para presentar proyectos y facilitar consultas o reservas.</small></a>
-<article class="project-marquee-card"><span>Proyecto real</span><strong>Casino Imagine Live</strong><small>Automatización de formación sobre juegos.</small></article>
+<div class="project-card-copy"><span class="project-kind">PROYECTO REAL</span><h3>Apartamentos Mar &amp; Arena</h3><p>Web de alquiler vacacional.</p><span class="project-cta" aria-hidden="true">Ver web ↗</span></div>
+</a>
+<a class="project-card reveal" role="listitem" href="https://nuxsolutions.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Nux Solutions (se abre en pestaña nueva)">
+<div class="project-preview">
+<div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>nuxsolutions.netlify.app</span></div>
+<div class="preview-fallback" aria-hidden="true"><span class="preview-mark">Nux Solutions</span><span>Web y producto digital</span></div>
+<img class="project-shot" src="/img/nux-solutions-desktop.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Vista previa del sitio web de Nux Solutions">
 </div>
+<div class="project-card-copy"><span class="project-kind">PROYECTO REAL</span><h3>Nux Solutions</h3><p>Landing pages para presentar proyectos.</p><span class="project-cta" aria-hidden="true">Ver web ↗</span></div>
+</a>
+<article class="project-card project-private reveal" role="listitem">
+<div class="project-preview private-preview">
+<div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>CASO PRIVADO</span></div>
+<div class="private-flow" aria-hidden="true"><span>Entrada</span><i></i><span>Proceso</span><i></i><span>Salida</span></div>
 </div>
+<div class="project-card-copy"><span class="project-kind">CASO PRIVADO</span><h3>Casino Imagine Live</h3><p>Un caso de automatización.</p><span class="project-cta">Caso privado</span></div>
+</article>
 </div>
 </section>
 
 <section class="wrap method-section" id="metodo" aria-labelledby="metodo-titulo">
-<div class="method-panel">
+<div class="method-panel reveal">
 <div class="content-heading">
-<span class="eyebrow">Un proceso sencillo y transparente</span>
-<h2 id="metodo-titulo">De la necesidad a la mejora.</h2>
-<p>Sabes qué vamos a hacer, por qué y cuál es el siguiente paso.</p>
+<span class="eyebrow">Cómo trabajo</span>
+<h2 id="metodo-titulo">Un proceso claro, paso a paso</h2>
+<p>De la necesidad a una mejora útil.</p>
 </div>
 <div class="method-grid">
 <article class="method-step">
-<span>01 · ESCUCHAR</span>
-<h3>Entender el punto de partida</h3>
-<p>Hablamos de tus objetivos, cómo trabajas hoy y qué te gustaría cambiar.</p>
+<span class="step-number">01</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9h8M8 12h5"/></svg></span>
+<h3>Escuchar</h3>
+<p>Entender el proceso y lo que necesitas.</p>
 </article>
 <article class="method-step">
-<span>02 · PRIORIZAR</span>
-<h3>Proponer con claridad</h3>
-<p>Reviso el alcance y las opciones; recibes una propuesta con prioridades y presupuesto antes de empezar.</p>
+<span class="step-number">02</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 15 5-5 4 3 7-8"/><path d="M15 5h5v5"/></svg></span>
+<h3>Priorizar</h3>
+<p>Definir alcance, presupuesto y siguientes pasos.</p>
 </article>
 <article class="method-step">
-<span>03 · CONSTRUIR</span>
-<h3>Implementar y revisar</h3>
-<p>Desarrollo la solución acordada, compruebo que funcione y te explico cómo utilizarla.</p>
+<span class="step-number">03</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 7 3 3M5 19l4-.8L19 8a2.1 2.1 0 0 0-3-3L6 15l-1 4Z"/></svg></span>
+<h3>Construir</h3>
+<p>Implementar, probar y explicar la solución.</p>
 </article>
 </div>
 </div>
@@ -682,13 +241,14 @@ html:not(.js) .nav-toggle{display:none}
 
 <section class="wrap faq-section" id="preguntas" aria-labelledby="preguntas-titulo">
 <div class="content-heading">
-<span class="eyebrow">Antes de empezar</span>
-<h2 id="preguntas-titulo">Preguntas frecuentes.</h2>
+<span class="eyebrow">Respuestas claras</span>
+<h2 id="preguntas-titulo">Preguntas frecuentes</h2>
 </div>
 <div class="faq-list">
-<details><summary>¿Tengo que contratar web y automatización a la vez?</summary><p>No. Podemos empezar por una web, por un proceso concreto o por revisar qué conviene priorizar.</p></details>
-<details><summary>¿Cómo se define el presupuesto?</summary><p>Primero se concreta el objetivo y el alcance. Después recibes una propuesta clara con el trabajo previsto y su presupuesto, antes de decidir.</p></details>
-<details><summary>¿Y si todavía no sé qué necesito?</summary><p>No hace falta llegar con una solución decidida. Cuéntame qué te está costando tiempo o qué te gustaría mejorar y lo analizamos juntos.</p></details>
+<details><summary>¿Tengo que contratar todos los servicios?</summary><p>No. Empezamos por lo que más necesita tu negocio.</p></details>
+<details><summary>¿Cómo se define el presupuesto?</summary><p>Acordamos el alcance antes de empezar. Recibes una propuesta cerrada.</p></details>
+<details><summary>¿Y si todavía no sé qué necesito?</summary><p>Cuéntame qué quieres mejorar. Lo revisamos y priorizamos juntos.</p></details>
+<details><summary>¿Qué ocurre después de la entrega?</summary><p>Te explico cómo utilizar la solución. Revisamos que responda al objetivo acordado.</p></details>
 </div>
 </section>
 
@@ -696,10 +256,9 @@ html:not(.js) .nav-toggle{display:none}
 <div class="wrap contact-card contact-layout">
 <div class="contact-info">
 <div class="contact-intro">
-<span class="eyebrow">El primer paso es una conversación</span>
-<h2>Hablemos de tu proyecto.</h2>
-<p>No hace falta tener la solución pensada. Cuéntame qué te preocupa y vemos qué tendría sentido para tu negocio.</p>
-<ul class="offer-list"><li>Una web más clara</li><li>Menos tareas manuales</li><li>Prioridades y presupuesto realistas</li></ul>
+<span class="eyebrow">Hablemos</span>
+<h2>¿Qué necesita tu negocio?</h2>
+<p>Cuéntame qué quieres mejorar.</p>
 </div>
 <a class="whatsapp-link" href="https://wa.me/34664633223?text=Hola%20Mika%2C%20vengo%20de%20tres40.dev%20y%20quiero%20hablar%20de%E2%80%A6" target="_blank" rel="noopener noreferrer">
 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.81 11.81 0 0 0 12.12 0C5.55 0 .2 5.34.2 11.92c0 2.1.55 4.15 1.6 5.96L.1 24l6.27-1.64a11.9 11.9 0 0 0 5.74 1.46h.01c6.57 0 11.92-5.35 11.92-11.92a11.82 11.82 0 0 0-3.52-8.42ZM12.12 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.88 9.88 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.91-9.92a9.85 9.85 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.94 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.67-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.81.38-.28.3-1.06 1.03-1.06 2.5s1.09 2.9 1.24 3.1c.15.2 2.14 3.27 5.18 4.59.72.31 1.28.5 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></svg>
@@ -716,14 +275,14 @@ html:not(.js) .nav-toggle{display:none}
 </div>
 <input class="hp" id="website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
 <input id="ts" name="ts" type="hidden">
-<div class="field wide consent"><input id="privacidad-check" name="privacidad" type="checkbox" value="true" required><label for="privacidad-check">He leído la <a href="#privacidad">Política de privacidad</a>.</label></div>
+<div class="field wide consent"><input id="privacidad-check" name="privacidad" type="checkbox" value="true" required><label for="privacidad-check">He leído la <a href="/privacidad/">Política de privacidad</a>.</label></div>
 <div class="cf-turnstile" data-sitekey="0x4AAAAAAF-cswaA7F01E_fP" data-size="flexible"></div>
 <button class="button submit" type="submit"><span id="submitLabel">Hablemos de tu proyecto</span> <span class="button-arrow" aria-hidden="true">↗</span></button>
 <p id="s" role="status" aria-live="polite"></p>
 </form>
 <div class="privacy-brief" aria-label="Información básica de privacidad">
 <p><strong>Finalidad:</strong> responder a tu consulta y, si lo solicitas, preparar una propuesta.</p>
-<p><strong>Derechos:</strong> puedes ejercerlos por email. Consulta los detalles en la <a href="#privacidad">política completa</a>.</p>
+<p><strong>Derechos:</strong> puedes ejercerlos mediante el formulario de contacto. Consulta los detalles en la <a href="/privacidad/">política completa</a>.</p>
 </div>
 </div>
 </div>
@@ -733,49 +292,19 @@ html:not(.js) .nav-toggle{display:none}
 <footer class="wrap footer">
 <div class="footer-top">
 <span>340 · Web, procesos y mejora digital</span>
-<div class="legal">
-<details id="aviso"><summary>Aviso legal</summary><div>
-<h3>Titular del sitio</h3>
-<p>Titular: Micaela Fernandez. NIF/NIE: <span data-config="legalNif">[COMPLETAR: NIF/NIE completo]</span>. Domicilio: <span data-config="legalAddress">Madrid, 28019 · [COMPLETAR: calle y número]</span>. Email: <span data-config="legalEmail">[COMPLETAR: correo legal válido]</span>.</p>
-<h3>Objeto y condiciones de uso</h3>
-<p>Este sitio informa sobre servicios de diseño web, automatización e integración de IA. Al navegar, la persona usuaria se compromete a utilizarlo de forma lícita, sin perjudicar el sitio ni los derechos de otras personas. La información general no constituye por sí misma una oferta ni un presupuesto vinculante.</p>
-<h3>Propiedad intelectual</h3>
-<p>Los textos, diseños, código y elementos gráficos propios están protegidos por la normativa de propiedad intelectual. No se autoriza su reproducción o explotación sin permiso, salvo los usos permitidos por ley. Las marcas y recursos de terceros pertenecen a sus titulares.</p>
-<h3>Responsabilidad</h3>
-<p>Se procura que la información sea correcta y que el sitio esté disponible, pero no se garantiza la ausencia de errores, interrupciones o contenidos de terceros enlazados. La titular no responde por usos ilícitos del sitio ni por servicios externos sujetos a sus propias condiciones.</p>
-<h3>Legislación</h3>
-<p>Se aplica la legislación española. Las controversias se resolverán ante los órganos competentes conforme a las normas aplicables.</p>
-</div></details>
-
-<details id="privacidad"><summary>Privacidad</summary><div>
-<h3>Marco normativo</h3><p>Esta información se facilita conforme al Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</p>
-<h3>Responsable y contacto</h3><p>Responsable: Micaela Fernandez. NIF/NIE: <span data-config="legalNif">[COMPLETAR: NIF/NIE completo]</span>. Domicilio: <span data-config="legalAddress">Madrid, 28019 · [COMPLETAR: calle y número]</span>. Contacto para privacidad: <span data-config="legalEmail">[COMPLETAR: correo legal válido]</span>.</p>
-<h3>Datos y finalidad</h3><p>El formulario recoge nombre, email y mensaje; además procesa datos técnicos para validar el envío y aplicar medidas anti-spam, y registra la confirmación de que has leído esta política. Se usan para responder a tu consulta y, si lo pides, adoptar medidas precontractuales. La casilla confirma que has leído esta política; no sustituye la base jurídica aplicable. No incluyas datos sensibles ni información de otras personas.</p>
-<p>El asistente de esta página transmite el texto que escribes y un identificador de sesión al servicio intermedio <span>chat-proxy.trescuatenta.workers.dev</span>. El proveedor de IA o servicio final utilizado por ese intermediario no es identificable en el código público: <span data-config="assistantProvider">[COMPLETAR: proveedor final del asistente de IA]</span>. El enlace de WhatsApp abre una conversación en WhatsApp; los mensajes que envíes allí son tratados por WhatsApp/Meta conforme a sus propias condiciones.</p>
-<h3>Base jurídica, conservación y gestión</h3><p>La base jurídica es atender tu solicitud y, cuando corresponda, aplicar medidas precontractuales que pidas. El formulario envía por HTTPS los datos a un webhook n8n alojado en un VPS de Contabo. Ubicación del servidor: <span data-config="vpsLocation">[COMPLETAR: ubicación del VPS]</span>. El navegador no envía correos directamente: cualquier aviso a la titular o confirmación automática al visitante depende de la configuración del flujo remoto y debe verificarse: <span data-config="emailFlow">[COMPLETAR: confirmar aviso interno y confirmación automática en n8n]</span>. El proveedor de correo es <span data-config="emailProvider">[COMPLETAR: proveedor de correo]</span>. Plazo de conservación: <span data-config="retentionPeriod">[COMPLETAR: plazo de conservación]</span>.</p>
-<h3>Medidas anti-spam y destinatarios</h3><p>El formulario incorpora Cloudflare Turnstile, que puede tratar datos técnicos, como dirección IP y señales del navegador, para verificar la interacción, y un campo trampa oculto. La existencia y duración de un límite de envíos por email y el almacenamiento temporal del email y la hora dependen del flujo remoto y no pueden confirmarse desde este código: <span data-config="emailRateLimit">[COMPLETAR: confirmar límite por email y tiempo de retención]</span>. Los proveedores identificables son Contabo (alojamiento), Cloudflare (Turnstile), el proveedor de correo pendiente de confirmar, y WhatsApp/Meta si eliges ese canal. No se venden datos ni se ceden a terceros para fines propios; los proveedores técnicos pueden tratarlos para prestar sus servicios.</p>
-<h3>Transferencias internacionales</h3><p>Cloudflare, WhatsApp/Meta y el servicio final del asistente pueden tratar datos desde otros países, incluido Estados Unidos. No se ha podido verificar desde este sitio la ubicación efectiva ni las garantías contractuales aplicables a cada proveedor. Antes de activar esos tratamientos se debe completar la información sobre el mecanismo y las garantías: <span data-config="transferSafeguards">[COMPLETAR: mecanismo y garantías para transferencias internacionales]</span>.</p>
-<h3>Tus derechos</h3><p>Puedes solicitar acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a <span data-config="legalEmail">[COMPLETAR: correo legal válido]</span>. También puedes reclamar ante la Agencia Española de Protección de Datos en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer nofollow">aepd.es</a>.</p>
-<h3>Menores</h3><p>Los servicios están dirigidos a profesionales y empresas, no a menores. No envíes datos de menores.</p>
-</div></details>
-
-<details id="cookies"><summary>Cookies</summary><div>
-<h3>Qué utiliza este sitio</h3><p>Este sitio no crea cookies propias ni utiliza almacenamiento del navegador para analítica o publicidad. La selección de tema solo cambia la apariencia durante esta visita. No se cargan Google Fonts: se usan fuentes del sistema. Actualmente no se carga analítica ni se muestra el aviso de consentimiento. No se utilizan tecnologías opcionales antes de obtener consentimiento.</p>
-<div class="legal-table-wrap"><table class="legal-table"><thead><tr><th>Nombre</th><th>Proveedor</th><th>Finalidad</th><th>Duración</th><th>Tipo</th></tr></thead><tbody>
-<tr><td>No se detectaron cookies propias</td><td>340</td><td>El código no escribe cookies.</td><td>No aplica</td><td>No aplica</td></tr>
-<tr><td>Almacenamiento del navegador para preferencias</td><td>340</td><td>No se guarda el tema ni datos de analítica o publicidad.</td><td>No aplica</td><td>No aplica</td></tr>
-<tr><td>Preferencia de cookies opcionales (almacenamiento local, solo si se activa el aviso)</td><td>340</td><td>Recordar la preferencia de cookies opcionales.</td><td>Hasta que se borre el almacenamiento del navegador.</td><td>Técnica, solo si se activa el aviso.</td></tr>
-<tr><td>Token temporal de verificación del formulario (no es una cookie)</td><td>Cloudflare</td><td>Token temporal para verificar la interacción anti-spam.</td><td>Temporal; el tiempo exacto depende de Cloudflare.</td><td>Técnica, no es una cookie.</td></tr>
-<tr><td>Cookies o almacenamiento de Turnstile</td><td>Cloudflare</td><td>La carga del widget puede usar tecnologías propias para seguridad; no se pudo completar una comprobación con el widget operativo.</td><td><span data-config="turnstileCookies">[COMPLETAR: verificar cookies con Turnstile operativo]</span></td><td>Técnica, si se instala.</td></tr>
-</tbody></table></div>
-<h3>Servicios externos</h3><p>El widget de Turnstile y el asistente conectan con servicios externos y pueden recibir datos técnicos como la IP. WhatsApp solo se abre si pulsas su enlace. No hay mapas, vídeos incrustados ni fuentes externas en el código. Los nombres y duraciones exactas de cualquier cookie de terceros deben comprobarse con el widget funcionando en producción.</p>
-<h3>Preferencias</h3><p>Al no cargar cookies no esenciales, no se muestra un banner. Si en el futuro se activa analítica, se añadirá un mecanismo para aceptar, rechazar o configurar antes de cargarla.</p>
-</div></details>
-<a id="cookieSettingsLink" class="cookie-settings-link" href="#cookies" hidden>Configurar cookies</a>
-
+<nav class="legal" aria-label="Información legal">
+<a href="/aviso-legal/">Aviso legal</a>
+<a href="/privacidad/">Privacidad</a>
+<a href="/cookies/">Cookies</a>
+</nav>
 <span>© <span id="y"></span> 340 · Todos los derechos reservados</span>
 </div>
 </footer>
+
+<nav class="mobile-action-bar" aria-label="Acciones rápidas">
+<a class="mobile-action-whatsapp" href="https://wa.me/34664633223?text=Hola%20Mika%2C%20vengo%20de%20tres40.dev%20y%20quiero%20hablar%20de%E2%80%A6" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a class="mobile-action-contact" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+</nav>
 
 <aside id="cookieBanner" class="cookie-banner" aria-labelledby="cookieBannerTitle" hidden>
 <h2 id="cookieBannerTitle">Preferencias de cookies</h2>
@@ -799,185 +328,7 @@ html:not(.js) .nav-toggle{display:none}
 <p class="chat-note">Asistente informativo · No compartas datos confidenciales</p>
 </section>
 
+<script src="/app.js"></script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<script>
-(function(){
-  var WEBHOOK="https://vmi3162910.contaboserver.net/webhook/contacto";
-  var CHAT_WEBHOOK="https://chat-proxy.trescuatenta.workers.dev";
-  document.getElementById("y").textContent=new Date().getFullYear();
-  document.querySelectorAll("[data-config]").forEach(function(node){
-    var key=node.getAttribute("data-config");
-    if(Object.prototype.hasOwnProperty.call(SITE_CONFIG,key))node.textContent=SITE_CONFIG[key];
-  });
-  if(COOKIES_ANALITICA){
-    var cookieBanner=document.getElementById("cookieBanner");
-    var cookieSettingsLink=document.getElementById("cookieSettingsLink");
-    var cookiePreferences=document.getElementById("cookiePreferences");
-    var analyticsConsent=document.getElementById("analyticsConsent");
-    var storedCookieChoice=window.localStorage.getItem("340-cookie-consent");
-    cookieSettingsLink.hidden=false;
-    if(!storedCookieChoice)cookieBanner.hidden=false;
-    else analyticsConsent.checked=JSON.parse(storedCookieChoice).analytics===true;
-    function storeCookieChoice(analytics){
-      window.localStorage.setItem("340-cookie-consent",JSON.stringify({necessary:true,analytics:analytics}));
-      cookieBanner.hidden=true;
-      cookiePreferences.hidden=true;
-      document.getElementById("configureCookies").setAttribute("aria-expanded","false");
-    }
-    document.getElementById("acceptCookies").addEventListener("click",function(){storeCookieChoice(true)});
-    document.getElementById("rejectCookies").addEventListener("click",function(){storeCookieChoice(false)});
-    document.getElementById("configureCookies").addEventListener("click",function(){
-      cookiePreferences.hidden=!cookiePreferences.hidden;
-      this.setAttribute("aria-expanded",String(!cookiePreferences.hidden));
-    });
-    document.getElementById("saveCookiePreferences").addEventListener("click",function(){storeCookieChoice(analyticsConsent.checked)});
-    cookieSettingsLink.addEventListener("click",function(){cookieBanner.hidden=false;cookiePreferences.hidden=false;document.getElementById("configureCookies").setAttribute("aria-expanded","true")});
-  }
-  var themeToggle=document.getElementById("themeToggle");
-  themeToggle.addEventListener("click",function(){
-    var light=document.documentElement.dataset.theme!=="light";
-    document.documentElement.dataset.theme=light?"light":"dark";
-    document.querySelector('meta[name="theme-color"]').content=light?"#f4efe9":"#171516";
-    themeToggle.textContent=light?"☾":"☼";
-    themeToggle.setAttribute("aria-label",light?"Cambiar a tema oscuro":"Cambiar a tema claro");
-    themeToggle.setAttribute("aria-pressed",String(light));
-    themeToggle.title=light?"Cambiar a tema oscuro":"Cambiar a tema claro";
-  });
-  var menu=document.getElementById("menu-principal"),menuToggle=document.querySelector(".nav-toggle"),menuBackdrop=document.querySelector(".menu-backdrop");
-  function setMenuOpen(open,restoreFocus){
-    menu.classList.toggle("is-open",open);
-    menuToggle.setAttribute("aria-expanded",String(open));
-    menuToggle.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú");
-    document.body.classList.toggle("menu-open",open);
-    menuBackdrop.hidden=!open;
-    if(open)menu.querySelector("a").focus();
-    else if(restoreFocus)menuToggle.focus();
-  }
-  menuToggle.addEventListener("click",function(){setMenuOpen(menuToggle.getAttribute("aria-expanded")!=="true",false)});
-  menu.addEventListener("click",function(event){if(event.target.closest("a"))setMenuOpen(false,false)});
-  menuBackdrop.addEventListener("click",function(){setMenuOpen(false,false)});
-  document.addEventListener("click",function(event){
-    if(menuToggle.getAttribute("aria-expanded")==="true"&&!menu.contains(event.target)&&!menuToggle.contains(event.target))setMenuOpen(false,false);
-  });
-  document.addEventListener("keydown",function(event){
-    if(event.key==="Escape"&&menuToggle.getAttribute("aria-expanded")==="true"){setMenuOpen(false,true)}
-  });
-  window.addEventListener("resize",function(){if(window.innerWidth>=860&&menuToggle.getAttribute("aria-expanded")==="true")setMenuOpen(false,false)});
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener("click",function(){
-      var hash=a.getAttribute("href");
-      if(hash.length<2)return;
-      var d=document.getElementById(hash.slice(1));
-      if(d&&d.tagName==="DETAILS")d.open=true;
-    });
-  });
-  var f=document.getElementById("f"),s=document.getElementById("s"),ts=document.getElementById("ts");
-  var submitButton=f.querySelector('button[type="submit"]'),submitLabel=document.getElementById("submitLabel");
-  var defaultSubmitLabel=submitLabel.textContent;
-  ts.value=Date.now();
-  f.addEventListener("focusin",function(event){
-    if(event.target.matches("input:not([type=hidden]):not([type=checkbox]), textarea, select"))document.body.classList.add("form-field-focused");
-  });
-  f.addEventListener("focusout",function(){
-    window.setTimeout(function(){
-      if(!f.contains(document.activeElement)||!document.activeElement.matches("input:not([type=hidden]):not([type=checkbox]), textarea, select"))document.body.classList.remove("form-field-focused");
-    },0);
-  });
-  function say(t,e){s.textContent=t;s.className=e?"err":"";if(t)s.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"})}
-  function resetTurnstile(){if(window.turnstile)window.turnstile.reset()}
-  f.addEventListener("submit",function(ev){
-    ev.preventDefault();
-    submitButton.disabled=true;
-    submitLabel.textContent="Enviando...";
-    say("",false);
-    var datos=Object.fromEntries(new FormData(f));
-    fetch(WEBHOOK,{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(datos)
-    })
-      .then(function(res){
-        return res.text().then(function(text){
-          if(res.status!==200)throw new Error("Unexpected response status");
-          return JSON.parse(text);
-        });
-      })
-      .then(function(data){
-        if(!data||data.ok!==true)throw new Error("Unexpected response body");
-        f.reset();
-        ts.value=Date.now();
-        resetTurnstile();
-        say("Mensaje enviado. Te responderé en 24-48 horas laborables. Revisa tu correo, te acabo de escribir.",false);
-      })
-      .catch(function(){
-        resetTurnstile();
-        say("No se pudo enviar. Revisa los datos e inténtalo de nuevo.",true);
-      })
-      .then(function(){
-        submitButton.disabled=false;
-        submitLabel.textContent=defaultSubmitLabel;
-      });
-  });
-  var toggle=document.getElementById("chatToggle"),panel=document.getElementById("chatPanel"),close=document.getElementById("chatClose");
-  var chatForm=document.getElementById("chatForm"),chatInput=document.getElementById("chatInput"),messages=document.getElementById("chatMessages");
-  var whatsappLink=document.querySelector(".whatsapp-link");
-  if(whatsappLink&&"IntersectionObserver" in window){
-    new IntersectionObserver(function(entries){
-      document.body.classList.toggle("whatsapp-visible",entries[0].isIntersecting);
-    },{threshold:.1}).observe(whatsappLink);
-  }
-  var chatSession="web-"+(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random().toString(36).slice(2));
-  function setChatOpen(open){
-    panel.classList.toggle("open",open);
-    panel.setAttribute("aria-hidden",String(!open));
-    toggle.setAttribute("aria-expanded",String(open));
-    if(open){
-      if(window.matchMedia("(max-width:760px)").matches)close.focus();
-      else chatInput.focus();
-    }else toggle.focus();
-  }
-  function addMessage(text,kind){
-    var item=document.createElement("div");
-    item.className="chat-message"+(kind?" "+kind:"");
-    item.textContent=text;
-    messages.appendChild(item);
-    messages.scrollTop=messages.scrollHeight;
-    return item;
-  }
-  toggle.addEventListener("click",function(){setChatOpen(!panel.classList.contains("open"))});
-  close.addEventListener("click",function(){setChatOpen(false)});
-  chatForm.addEventListener("submit",function(ev){
-    ev.preventDefault();
-    var question=cl(chatInput.value);
-    if(!question)return;
-    addMessage(question,"user");
-    chatInput.value="";
-    if(!CHAT_WEBHOOK){
-      addMessage("El asistente todavía no está conectado. Configura la URL del Webhook de n8n para activar las respuestas.", "error");
-      return;
-    }
-    var send=chatForm.querySelector("button");
-    send.disabled=true;
-    var pending=addMessage("Estoy revisándolo...");
-    fetch(CHAT_WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:question,sessionId:chatSession})})
-      .then(function(response){
-        if(!response.ok)throw new Error("HTTP "+response.status);
-        var type=response.headers.get("content-type")||"";
-        return type.indexOf("application/json")!==-1?response.json():response.text();
-      })
-      .then(function(data){
-        var answer=typeof data==="string"?data:(data&&(data.output||data.answer||data.response||data.text));
-        if(typeof answer!=="string"||!answer.trim())throw new Error("La respuesta del webhook no contiene output, answer, response o text.");
-        pending.textContent=answer.trim();
-      })
-      .catch(function(error){
-        pending.classList.add("error");
-        pending.textContent="No he podido conectar con el asistente. Inténtalo más tarde.";
-        if(window.console)console.error("Error del asistente n8n:",error);
-      })
-      .then(function(){send.disabled=false;chatInput.focus()});
-  });
-})();
-</script>
 </body>
 </html>
