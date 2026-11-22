@@ -178,7 +178,7 @@ const COOKIES_ANALITICA=false;
   close.addEventListener("click",function(){setChatOpen(false)});
   chatForm.addEventListener("submit",function(ev){
     ev.preventDefault();
-    var question=cl(chatInput.value);
+    var question=chatInput.value.trim();
     if(!question)return;
     addMessage(question,"user");
     chatInput.value="";
